@@ -49,7 +49,7 @@
           };
       },
       methods: {
-          getGithub() {
+          async getGithub() {
               axios
                  .get("https://api.github.com/users/thewolmer/repos")
                   .then(response => {
@@ -59,7 +59,7 @@
                   .catch((error) => {
                   console.log(error);
               });
-          }
+          },
       },
 
   }

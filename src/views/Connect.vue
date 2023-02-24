@@ -13,7 +13,7 @@ import ClubhouseLogo from '../components/icons/Custom/ClubhouseLogo.vue';
         <Header title="Connect" descrip="If you have any questions, feel free to contact me." />
         <div  class="mt-4 grid gap-2 md:gap-4 md:grid-cols-2">
 
-        <a href="https://twitter.com/thewolmer/" target="_blank" rel="noopener noreferrer">
+        <a href="https://twitter.com/intent/user?screen_name=thewolmer" target="_blank" rel="noopener noreferrer">
         <ContentGrid
           descrip="Follow me on Twitter"
           title="Twitter">
@@ -61,7 +61,7 @@ import ClubhouseLogo from '../components/icons/Custom/ClubhouseLogo.vue';
         </ContentGrid>
         </a>
 
-        <a href="https://snapchat.com/thewolmer" target="_blank" rel="noopener noreferrer">
+        <a href="https://snapchat.com/add/thewolmer" target="_blank" rel="noopener noreferrer">
         <ContentGrid
           descrip="Send Request on Snapchat"
           title="Snapchat">

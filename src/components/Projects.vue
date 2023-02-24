@@ -20,7 +20,7 @@
 
                     </p>
                 </div>
-                <div class="flex-shrink-0"> <img :src="item.photo" class="rounded-xl w-20" loading="lazy" :alt="item.name"> </div>
+                <div class="flex-shrink-0"> <img :src="item.photo" class="rounded-xl w-20 shadow-lg shadow-current" loading="lazy" :alt="item.name"> </div>
             </a>
      </div>
 

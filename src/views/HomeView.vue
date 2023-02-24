@@ -48,7 +48,7 @@ import LinkTab from '../components/LinkTab.vue';
       
       
       <div class="rounded-full mb-4 md:mb-0">
-        <div smart-image="true" id="pfp-bg" class="block rounded-full shadow-md shadow-wolgray mx-auto -mt-16 h-48 w-48 bg-cover bg-center select-none">
+        <div smart-image="true" id="pfp-bg" class="block rounded-full shadow-md shadow-green-600 mx-auto -mt-16 h-48 w-48 bg-cover bg-center select-none">
           <!-- <img src="./src/assets/cd/icon.png" alt="image" loading="lazy" class="invisible">  -->
         </div>
       </div>
