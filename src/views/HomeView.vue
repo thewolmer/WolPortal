@@ -8,6 +8,7 @@ import LinkTab from '../components/LinkTab.vue';
 </script>
 
 <template>
+  
   <main class="space-y-14 mb-10 container mx-auto min-h-screen pb-8 w-11/12 sm:pb-10 sm:w-9/12 md:w-7/12">
     <header class="rounded-md flex flex-col-reverse my-16 mx-4  py-10 justify-between md:flex-row md:items-center">
       <div id="top" class="md:w-8/12">
@@ -46,7 +47,7 @@ import LinkTab from '../components/LinkTab.vue';
       
       
       
-      
+  
       <div class="rounded-full mb-4 md:mb-0">
         <div smart-image="true" id="pfp-bg" class="block rounded-full shadow-md shadow-green-600 mx-auto -mt-16 h-48 w-48 bg-cover bg-center select-none">
           <!-- <img src="./src/assets/cd/icon.png" alt="image" loading="lazy" class="invisible">  -->
@@ -76,6 +77,7 @@ import LinkTab from '../components/LinkTab.vue';
     </section>
     <Projects />
     <TechUsed />
+
 
   </main>
   <div class="w-full py-4 bg-neutral-800 text-gray-200">

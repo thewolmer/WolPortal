@@ -53,7 +53,7 @@
   export default {
       name: "Lanyard",
       
-      mounted() {
+      created() {
           this.getStatus();
       },
       data() {

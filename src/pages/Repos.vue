@@ -1,3 +1,4 @@
+
 <template>
     
       <a :href=" item.html_url " v-for="item in repos" :key="item.id" target="_blank" rel="noreferrer noopener">
@@ -24,6 +25,19 @@
         </div>
         </div>
       </a>
+
+      <div v-if="error.message" class=" text-red-500 flex flex-col items-center justify-center">
+        <p class="text-center my-4">
+          <i class='bx bxs-error-circle text-4xl'></i>
+          <br>
+          <span>
+          {{  error.message }}
+        </span>
+      </p>
+      <a href="https://status.wolmer.me/" target="_blank">
+      <button class="bg-[#1d1d1d] text-wolgray px-2 py-1 rounded-md shadow-lg hover:bg-[#202020] hover:border border-blue-700"> Status Page <i class='bx bx-link-external' style='color:#737373'  ></i></button>
+    </a>
+      </div>
     
   </template>
 
@@ -40,12 +54,13 @@
   
   export default {
       name: "reposData",
-      mounted() {
+      created() {
           this.getGithub();
       },
       data() {
           return {
-              repos: []
+              repos: [],
+              error: []
           };
       },
       methods: {
@@ -57,7 +72,8 @@
                   // console.log(response);
               })
                   .catch((error) => {
-                  console.log(error);
+                  // console.log(error);
+                  this.error = error;
               });
           }
       },
