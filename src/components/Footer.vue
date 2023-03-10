@@ -24,6 +24,7 @@
     <hr class="my-6 sm:mx-auto border-gray-700 lg:my-8" />
     <span class="block text-sm sm:text-center text-gray-400">This Website is Open Source <a href="https://github.com/thewolmer/WolPortal" class=" linked-white ">on Github</a>. 
     </span>
+    
 </div>
 </footer>
 

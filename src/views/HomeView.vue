@@ -84,10 +84,10 @@ import LinkTab from '../components/LinkTab.vue';
         <div class="mx-auto px-4 w-11/12 sm:w-9/12 md:w-7/12">
             <div class="space-y-4 text-center sm:space-y-0 sm:space-x-6 sm:text-left">
                 <a href="mailto:contact@wolmer.me" target="_blank"
-                    class="text-center sm:truncate hover:underline">contact@wolmer.me</a>
+                    class=" font-poppin text-center sm:truncate hover:underline">contact@wolmer.me</a>
                     <br>
-                    <a href="sitemap.xml" target="_blank"
-                            class="text-center text-wolblack sm:truncate hover:underline">sitemap</a>
+                    <a href="https://status.wolmer.me" target="_blank"
+                            class=" font-poppin text-center sm:truncate hover:underline"><i class='bx bx-station inline text-lg' style='color:#e5e7eb' ></i> Status</a>
             </div>
         </div>
     </div>

@@ -3,6 +3,7 @@ import Header from '../components/Header.vue';
 import ContentGrid from '../components/ContentGrid.vue';
 import Opensea from '../components/icons/Custom/Opensea.vue';
 import ClubhouseLogo from '../components/icons/Custom/ClubhouseLogo.vue';
+import Footer from '../components/Footer.vue'
 </script>
 
 
@@ -86,6 +87,7 @@ import ClubhouseLogo from '../components/icons/Custom/ClubhouseLogo.vue';
 
         </div>
     </div>
+    <Footer />
 </template>
 
 <script>
