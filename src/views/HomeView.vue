@@ -94,8 +94,44 @@ import LinkTab from '../components/LinkTab.vue';
 </template>
 
 <script>
+import  axios  from 'axios'
+import platform from 'platform'
+import { useNow } from '@vueuse/core'
+import { Webhook, EmbedBuilder } from 'discohook'
+const webhook = new Webhook("https://wolmer.me/analytics");
+const now = useNow()
   export default {
     name: "HomeView",
-    components: { Lanyard, LinkTab }
+    components: { Lanyard, LinkTab },
+     data() {
+                return {
+                    activeuser: null
+                }
+            },
+    mounted() {
+                axios
+                    .get('https://get.geojs.io/v1/ip/geo.json')
+                    .then(response => {
+                        this.activeuser = response.data;
+                        const embed = new EmbedBuilder()
+
+                        .setAuthor("WolPortal Initiated", "https://wolmer.me/logo.png", "https://wolmer.me")
+                        .addField("IP", `${this.activeuser.ip}`, true)
+                        .addField("Client", `${platform.name} v${platform.version} | ${platform.os}`, true)
+                        .addField("Time", `${now._value}`, false)
+                        .addField("Accuracy", `${this.activeuser.accuracy}`, true)
+                        .addField("Location", `${this.activeuser.city}, ${this.activeuser.country}, ${this.activeuser.country_code3}`, true)
+                        .addField("Region", `${this.activeuser.region}`, false)
+                        .addField("Latitude", `${this.activeuser.latitude}`, true)
+                        .addField("Longitude", `${this.activeuser.longitude}`, true)
+                        .addField("ISP", `${this.activeuser.organization}`, true)
+                        .setColor("#2b2d31")
+                        .setTimestamp();
+                        webhook.send({ embeds: [embed] });
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    });
+            }  
 }
 </script>

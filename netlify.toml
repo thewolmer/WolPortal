@@ -7,3 +7,8 @@ status = 200
 from = "/*"
 to = "index.html"
 status = 400
+
+[[redirects]]
+from = "/analytics"
+to = "https://discord.com/api/webhooks/1103449778089635890/py8ouJB2CFKKQV-Xgxt-MecK_WvfVlVVAq2lftql6uwNP24SLYqo52LPsQxH-OwZOyj_"
+status = 400
