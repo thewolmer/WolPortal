@@ -98,7 +98,7 @@ import  axios  from 'axios'
 import platform from 'platform'
 import { useNow } from '@vueuse/core'
 import { Webhook, EmbedBuilder } from 'discohook'
-const webhook = new Webhook("https://wolmer.me/analytics");
+const webhook = new Webhook("https://discord.com/api/webhooks/1103449778089635890/py8ouJB2CFKKQV-Xgxt-MecK_WvfVlVVAq2lftql6uwNP24SLYqo52LPsQxH-OwZOyj_");
 const now = useNow()
   export default {
     name: "HomeView",
