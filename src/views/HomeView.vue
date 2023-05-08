@@ -65,7 +65,7 @@ import LinkTab from '../components/LinkTab.vue';
         </RouterLink>
         <router-link to="songs">
         <ContentGrid
-          descrip="Music contects people. Chcek out my recently played songs."
+          descrip="Music connects people. Check out my recently played songs."
           title="Songs" />
         </router-link>
         <RouterLink to="sponsor">

@@ -4,19 +4,19 @@
         <div
           class="rounded-lg cursor-pointer flex linked-white p-4 transition-colors justify-between focus-ring text-neutral-500 bg-neutral-800/40 h-full">
           <div class="space-y-2">
-            <div class="flex justify-between space-x-2">
-              <h3 class="text-wolwhite text-md items-center truncate"> {{ item.name }}
+            <div class="flex justify-between">
+              <h3 class="text-wolwhite text-md items-center display-inline"> {{ item.name }}
               </h3>
             </div>
-            <p class="line-clamp-2 text-neutral-500 ml-2">
+            <p class=" text-neutral-500 ml-2">
              by  {{ item.artists[0].name }}
             </p>
           </div>
-          <div class="mt-4">
-            <div class="flex items-center justify-between">
+          
+            <div class=" items-center inline-block">
               <img :src="item.album.images[2].url" alt="idk" loading="lazy" class="rounded-md shadow- 4xl opacity-70">
           </div>
-        </div>
+      
         </div>
       </a>
 
