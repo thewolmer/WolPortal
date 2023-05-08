@@ -60,12 +60,17 @@ import LinkTab from '../components/LinkTab.vue';
       <div class="mt-4 grid gap-4 md:grid-cols-2">
         <RouterLink to="repos">
         <ContentGrid
-          descrip="Want to see and/or contribute to my code and public repositories? See the list of my projects and open source code here."
+          descrip="See the list of my projects and open source code here."
           title="Repositories" />
         </RouterLink>
+        <router-link to="songs">
+        <ContentGrid
+          descrip="Music contects people. Chcek out my recently played songs."
+          title="Songs" />
+        </router-link>
         <RouterLink to="sponsor">
         <ContentGrid
-          descrip="Want to support me and my work, so that i can create more cool stuff? Consider donating money via subscription or crypto."
+          descrip="Want to support me and my work, so that i can create more cool stuff?"
           title="Sponsor" />
         </RouterLink>
         <RouterLink to="connect">
@@ -108,7 +113,7 @@ const now = useNow()
                     activeuser: null
                 }
             },
-    mounted() {
+    created() {
                 axios
                     .get('https://get.geojs.io/v1/ip/geo.json')
                     .then(response => {
