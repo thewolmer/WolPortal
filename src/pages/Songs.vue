@@ -1,6 +1,6 @@
 
 <template>
-      <a :href="item.href" v-for="item in songs" :key="item.id" target="_blank" rel="noreferrer noopener">
+      <a :href="item.external_urls.spotify" v-for="item in songs" :key="item.id" target="_blank" rel="noreferrer noopener">
         <div
           class="rounded-lg cursor-pointer flex linked-white p-4 transition-colors justify-between focus-ring text-neutral-500 bg-neutral-800/40 h-full">
           <div class="space-y-2">
@@ -13,8 +13,8 @@
             </p>
           </div>
           
-            <div class=" items-center inline-block">
-              <img :src="item.album.images[2].url" alt="idk" loading="lazy" class="rounded-md shadow- 4xl opacity-70">
+            <div class=" items-center inline-block mt-2">
+              <img :src="item.album.images[2].url" :alt="item.name" loading="lazy" class="rounded-md shadow- 4xl opacity-70 w-64px">
           </div>
       
         </div>
