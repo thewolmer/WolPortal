@@ -38,18 +38,14 @@
       <button class="bg-[#1d1d1d] text-wolgray px-2 py-1 rounded-md shadow-lg hover:bg-[#202020] hover:border border-blue-700"> Status Page <i class='bx bx-link-external' style='color:#737373'  ></i></button>
     </a>
       </div>
+
     
   </template>
 
-
-
-
-
-
-
 <script>
-  import { reactive } from 'vue'
+  import { reactive, ref } from 'vue'
   import  axios  from 'axios'
+  let loading = ref(true)
 
   
   export default {
@@ -61,6 +57,7 @@
           return {
               repos: [],
               error: []
+           
           };
       },
       methods: {
@@ -69,6 +66,7 @@
                  .get("https://api.github.com/users/thewolmer/repos")
                   .then(response => {
                   this.repos = response.data;
+                   loading.value = false 
                   // console.log(response);
               })
                   .catch((error) => {
