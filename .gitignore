@@ -8,6 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+.env
 .DS_Store
 dist
 dist-ssr
@@ -18,7 +19,6 @@ coverage
 /cypress/screenshots/
 
 # Editor directories and files
-.env
 .vscode/*
 !.vscode/extensions.json
 .idea
