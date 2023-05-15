@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import NProgress from 'nprogress';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -48,8 +49,23 @@ const router = createRouter({
   
 })
 
-router.beforeEach((to, from) => {
-  document.title = `${ to.name } - WolPortal`
+// router.beforeEach((to, from) => {
+//   document.title = `${ to.name } - WolPortal`
+// })
+
+router.beforeResolve((to, from, next) => {
+  // If this isn't an initial page load.
+   document.title = `${ to.name } - WolPortal`
+  if (to.name) {
+      // Start the route progress bar.
+      NProgress.start()
+  }
+  next()
+})
+
+router.afterEach((to, from, faliure ) => {
+  // Complete the animation of the route progress bar.
+  NProgress.done()
 })
 
 export default router

@@ -1,16 +1,11 @@
 <template>
-        <div
-          class="rounded-md linked-white focus-ring overflow-x-hidden transition-colors p-4 cursor-pointer bg-neutral-800/40 mt-4  gap-4 md:grid-cols-2 items-center flex space-x-4 justify-between">
-          <div class="overflow-x-hidden ">
-            <h2 class="font-medium text-neutral-100">
-              {{ title }}
-            </h2>
-            <p class="text-neutral-500 line-clamp-2">
-              {{ descrip }}
-            </p>
-        </div> <!---->
-            <div class="flex-shrink-0 text-wolgray"> <slot name="icon"> </slot> </div>
-        </div>
+        <div class=" rounded-lg bg-default hover:bg-active card-base  overflow-x-hidden transition-colors p-4 cursor-pointer">
+           <div class="overflow-x-hidden leading-relaxed space-y-2">
+            <h2 class="font-medium text-white truncate">
+      {{ title }}
+    </h2> <p class="text-white/30 text-md line-clamp-2">
+        {{ descrip }}
+      </p></div> </div>
 </template>
 
 <script setup>

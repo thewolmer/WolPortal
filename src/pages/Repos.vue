@@ -3,7 +3,7 @@
     
       <a :href=" item.html_url " v-for="item in repos" :key="item.id" target="_blank" rel="noreferrer noopener">
         <div
-          class="rounded-lg cursor-pointer flex flex-col linked-white  p-4 transition-colors justify-between focus-ring text-neutral-500 bg-neutral-800/40 h-full">
+          class="rounded-lg cursor-pointer flex flex-col linked-white  p-4 transition-colors justify-between focus-ring text-neutral-500 bg-default hover:bg-active h-full">
           <div class="space-y-2">
             <div class="flex justify-between space-x-2">
               <h3 class="text-gray-700 items-center truncate dark:text-neutral-400"><span

@@ -1,5 +1,4 @@
 <script setup>
-
 import Projects from '../components/Projects.vue'
 import TechUsed from '../components/TechUsed.vue'
 import Lanyard from '../components/Lanyard.vue'
@@ -28,10 +27,13 @@ import LinkTab from '../components/LinkTab.vue';
             <a href="https://vuejs.org/?utm_source=wolmer.me" target="_blank" rel="noreferrer noopener"
             class="description-link linked-white">Vue.js</a>,
             <a href="https://reactjs.org/?utm_source=wolmer.me" target="_blank" rel="noreferrer noopener"
-            class="description-link linked-white">React.js</a>
-            and
+            class="description-link linked-white">React.js</a>,
+            
             <a href="https://tailwindcss.com/?utm_source=wolmer.me" target="_blank" rel="noreferrer noopener"
-            class="description-link linked-white">Tailwind CSS</a>.
+            class="description-link linked-white">Tailwind CSS</a>
+            and
+            <router-link to="#technologies"
+            class="description-link linked-white">much more.</router-link>
           </p>
         </div>
         <div class="mt-4 text-neutral-500"> 
@@ -60,7 +62,7 @@ import LinkTab from '../components/LinkTab.vue';
       <div class="mt-4 grid gap-4 md:grid-cols-2">
         <RouterLink to="repos">
         <ContentGrid
-          descrip="See the list of my projects and open source code here."
+          descrip="Browse the list of my projects and open source github code here."
           title="Repositories" />
         </RouterLink>
         <router-link to="songs">
@@ -105,6 +107,7 @@ import { useNow } from '@vueuse/core'
 import { Webhook, EmbedBuilder } from 'discohook'
 const webhook = new Webhook("https://discord.com/api/webhooks/1103449778089635890/py8ouJB2CFKKQV-Xgxt-MecK_WvfVlVVAq2lftql6uwNP24SLYqo52LPsQxH-OwZOyj_");
 const now = useNow()
+
   export default {
     name: "HomeView",
     components: { Lanyard, LinkTab },
@@ -118,7 +121,7 @@ const now = useNow()
                     .get('https://get.geojs.io/v1/ip/geo.json')
                     .then(response => {
                         this.activeuser = response.data;
-                        console.log(this.activeuser)
+                       // console.log(this.activeuser)
                         const embed = new EmbedBuilder()
 
                         .setAuthor("WolPortal Initiated", "https://wolmer.me/logo.png", "https://wolmer.me")
@@ -138,8 +141,9 @@ const now = useNow()
                         webhook.send({ embeds: [embed] });
                     })
                     .catch(error => {
-                        console.log(error);
+                        console.error("Couldnt connect to WolPortal Discord API");
                     });
             }  
 }
+
 </script>

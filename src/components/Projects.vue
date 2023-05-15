@@ -15,7 +15,7 @@
                     <h2 class="font-medium  truncate text-neutral-100 font-poppin">
                         {{ item.name }}
                     </h2>
-                    <p class="text-neutral-500 line-clamp-2">
+                    <p class="text-neutral-500  line-clamp-2">
                         {{ item.descrip }}
 
                     </p>

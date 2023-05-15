@@ -47,9 +47,7 @@
 
 <script>
  
-  import  axios  from 'axios'
-  
-  
+  import  axios  from 'axios'  
   export default {
       name: "Lanyard",
       
@@ -65,18 +63,15 @@
       },
    
       methods: {
-          getStatus() {
-              axios
+         async getStatus() {
+             await axios
                  .get("https://api.lanyard.rest/v1/users/932865250930360331")
                   .then(response => {
                   this.status = response.data.data;
                   this.activity = response.data.data.activities[0];
-                //   console.log(response.data.activities);
-                //   console.log(response);
-                //   console.warn(this.activity.assets.large_text);
               })
                   .catch((error) => {
-                  console.log(error);
+                  console.error("Could not connect to WolPortal Presence API");
               });
           }
       },

@@ -24,12 +24,14 @@
         <p class="text-center my-4">
           <i class='bx bxs-error-circle text-4xl'></i>
           <br>
-          <span>
-          {{  error.message }}
+          Something went wrong, Try refreshing the Page
+           <br>
+          <span class="text-sm">
+          {{  error.code }}
         </span>
       </p>
       <a href="https://status.wolmer.me/" target="_blank">
-      <button class="bg-[#1d1d1d] text-wolgray px-2 py-1 rounded-md shadow-lg hover:bg-[#202020] hover:border border-blue-700"> Status Page <i class='bx bx-link-external' style='color:#737373'  ></i></button>
+      <button class="bg-[#1d1d1d] text-wolgray px-2 py-1 rounded-md shadow-lg hover:bg-[#202020] hover:border border-red-500"> Status Page <i class='bx bx-link-external' style='color:#737373'  ></i></button>
     </a>
       </div>
     
@@ -38,7 +40,7 @@
 <script>
   import { reactive } from 'vue'
   import  axios  from 'axios'
-
+  
     const headers = {
   'Content-Type': 'application/json'
     };
@@ -51,7 +53,7 @@
       data() {
           return {
               songs: [],
-              error: []
+              error: [ ]
           };
       },
       methods: {

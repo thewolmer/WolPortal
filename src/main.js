@@ -1,11 +1,10 @@
 import { createApp } from 'vue'
+import 'dotenv'
 import App from './App.vue'
 import router from './router'
 import VueGtag from "vue-gtag";
-
-
-
-import './assets/main.css'
+// import './assets/main.css'
+// import '../node_modules/nprogress/nprogress.css'
 
 const app = createApp(App)
 

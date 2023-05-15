@@ -1,6 +1,6 @@
 {
-  "name": "vue-project",
-  "version": "0.0.0",
+  "name": "wolportal",
+  "version": "3.0.2",
   "private": true,
   "scripts": {
     "dev": "vite",
@@ -10,6 +10,8 @@
   "dependencies": {
     "@vueuse/core": "^10.1.2",
     "discohook": "^1.0.4",
+    "dotenv": "^16.0.3",
+    "nprogress": "^0.2.0",
     "platform": "^1.3.6",
     "vue": "^3.2.45",
     "vue-gtag": "^2.0.1",
