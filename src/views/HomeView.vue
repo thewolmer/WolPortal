@@ -151,7 +151,7 @@ import LinkTab from '../components/LinkTab.vue';
 
   export default {
     name: "HomeView",
-    components: {  LinkTab },
+    components: {  LinkTab, Projects, ContentGrid },
 
              created() {
           this.getStatus();
