@@ -18,7 +18,7 @@ import Footer from '../components/Footer.vue'
         <ContentGrid
           descrip="Follow me on Twitter"
           title="Twitter">
-            <template #icon> <i class='bx bxl-twitter text-4xl' style='color:#737373' ></i> </template>
+             <i class='bx bxl-twitter text-4xl' style='color:#737373' ></i> 
         </ContentGrid>
         </a>
 

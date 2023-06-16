@@ -1,7 +1,6 @@
 <script setup>
 import Projects from '../components/Projects.vue'
 import TechUsed from '../components/TechUsed.vue'
-import Lanyard from '../components/Lanyard.vue'
 import ContentGrid from '../components/ContentGrid.vue';
 import LinkTab from '../components/LinkTab.vue';
 </script>
@@ -32,15 +31,59 @@ import LinkTab from '../components/LinkTab.vue';
             <a href="https://tailwindcss.com/?utm_source=wolmer.me" target="_blank" rel="noreferrer noopener"
             class="description-link linked-white">Tailwind CSS</a>
             and
-            <router-link to="#technologies"
-            class="description-link linked-white">much more.</router-link>
+            much more.
           </p>
         </div>
         <div class="mt-4 text-neutral-500"> 
-         
-          <Lanyard /> 
         
-       
+          <div v-if="status">
+    <div v-if="status.listening_to_spotify == true" class="flex items-center gap-2"> 
+        <span>
+            <i class='bx bxl-spotify text-2xl' style='color:#4eef3c' aria-hidden="true" ></i>
+        </span>
+        
+        <p class="inline">
+            Listening to 
+            <span class="text-white animate-pulse">{{ status.spotify.song }}</span> by
+            <span class="text-white animate-pulse">{{ status.spotify.artist }}</span> 
+        </p>
+        
+    </div>
+    <div v-else>
+        <div v-if=" status.discord_status == 'online' " class="flex items-center gap-2"> 
+            <i class='bx bx-radio-circle-marked animate-pulse  text-2xl' style='color:#3ba45c'  ></i>
+           
+            
+            <p class="inline">
+                <span class="animate-pulse ">  Online </span> 
+                on discord
+            </p>
+        </div>
+
+        <div v-if=" status.discord_status == 'idle' " class="flex items-center gap-2"> 
+            <i class='bx bxs-moon text-md' style='color:#faa61a'  ></i>
+            
+            <p class="inline">
+                <span>  AFK </span> 
+                on discord
+            </p>
+        </div>
+        <div v-if="status.discord_status == 'offline' " class="flex items-center gap-2"> 
+            <i class='bx bx-radio-circle text-2xl' style='color:#747f8d'  ></i>
+            
+            <p class="inline">
+                <span class="">Offline</span> 
+            </p>
+        </div>
+    </div>
+
+
+    </div>
+    
+    <div v-if="loading" class="flex space-x-2 animate-pulse" >
+      <div class="p-2 ml-1 rounded-full bg-neutral-700 inline-flex animate-pulse"></div>
+        <div class="bg-neutral-700 inline-flex px-14 py-2 rounded-full animate-pulse"></div>
+    </div> 
         </div>
     <LinkTab />
 
@@ -51,8 +94,8 @@ import LinkTab from '../components/LinkTab.vue';
       
   
       <div class="rounded-full mb-4 md:mb-0">
-        <div smart-image="true" id="pfp-bg" class="block rounded-full shadow-md shadow-green-600 mx-auto -mt-16 h-48 w-48 bg-cover bg-center select-none">
-          <!-- <img src="./src/assets/cd/icon.png" alt="image" loading="lazy" class="invisible">  -->
+        <div id="pfp-bg" class="block rounded-full shadow-md shadow-green-600 mx-auto -mt-16 h-48 w-48 bg-cover bg-center select-none">
+         
         </div>
       </div>
     </header>
@@ -101,49 +144,42 @@ import LinkTab from '../components/LinkTab.vue';
 </template>
 
 <script>
-import  axios  from 'axios'
-import platform from 'platform'
-import { useNow } from '@vueuse/core'
-import { Webhook, EmbedBuilder } from 'discohook'
-const webhook = new Webhook("https://discord.com/api/webhooks/1103449778089635890/py8ouJB2CFKKQV-Xgxt-MecK_WvfVlVVAq2lftql6uwNP24SLYqo52LPsQxH-OwZOyj_");
-const now = useNow()
+ import  axios  from 'axios' 
+    import { ref } from 'vue';
+    let loading = ref(true)
+
 
   export default {
     name: "HomeView",
-    components: { Lanyard, LinkTab },
-     data() {
-                return {
-                    activeuser: null
-                }
-            },
-    created() {
-                axios
-                    .get('https://get.geojs.io/v1/ip/geo.json')
-                    .then(response => {
-                        this.activeuser = response.data;
-                       // console.log(this.activeuser)
-                        const embed = new EmbedBuilder()
+    components: {  LinkTab },
 
-                        .setAuthor("WolPortal Initiated", "https://wolmer.me/logo.png", "https://wolmer.me")
-                        .addField("IP", `${this.activeuser.ip}`, true)
-                        .addField("Client", `${platform.name} v${platform.version} | ${platform.os}`, false)
-                        .addField("Time", `${now._value}`, false)
-                        .addField("Accuracy", `${this.activeuser.accuracy}`, true)
-                        .addField("Location", `${this.activeuser.city}, ${this.activeuser.country}, ${this.activeuser.country_code3}`, true)
-                        .addField("Region", `${this.activeuser.region}`, false)
-                        .addField("Area code", `${this.activeuser.area_code}`, false)
-                        .addField("ASN", `${this.activeuser.asn}`, true)
-                        .addField("Latitude", `${this.activeuser.latitude}`, true)
-                        .addField("Longitude", `${this.activeuser.longitude}`, true)
-                        .addField("ISP", `${this.activeuser.organization}`, true)
-                        .setColor("#2b2d31")
-                        .setTimestamp();
-                        webhook.send({ embeds: [embed] });
-                    })
-                    .catch(error => {
-                        console.error("Couldnt connect to WolPortal Discord API");
-                    });
-            }  
+             created() {
+          this.getStatus();
+      },
+      data() {
+          return {
+              status: [],
+              activity: [],
+              error: []
+              
+          };
+      },
+   
+      methods: {
+         async getStatus() {
+             await axios
+                 .get("https://api.lanyard.rest/v1/users/932865250930360331")
+                  .then(response => {
+                    loading.value = false
+                  this.status = response.data.data;
+                  this.activity = response.data.data.activities[0];
+              })
+                  .catch((e) => {
+                    
+                  this.error = e.data
+              });
+          }
+      },
 }
 
 </script>

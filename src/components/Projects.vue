@@ -40,8 +40,16 @@
           name: "Moonie Moo",
           descrip: "Keith Chapman’s latest creation “Moonie Moo” as a Genesis Collection of 7,777 NFTs.",
           link: "https://mooniemoo.io?utm_source=wolmer.me",
-          logo: "https://cdn.discordapp.com/attachments/1060254254591393853/1060348982540378152/key-moo.webp",
+          logo: "https://cdn.discordapp.com/attachments/933379220258820156/1119321509073264720/GrQs2oFi_400x400.png",
           start: "Sep-2022",
+          end: "Present",
+        },
+        {
+          name: "Iacon Labs",
+          descrip: "Web3 Alpha community dedicated to exploring the endless possibilities of NFT technology.",
+          link: "https://iaconlabs.com?utm_source=wolmer.me",
+          logo: "https://cdn.discordapp.com/attachments/933379220258820156/1119319966898991175/kiQumrQ3_400x400.jpg",
+          start: "Apr-2023",
           end: "Present",
         },
         {
