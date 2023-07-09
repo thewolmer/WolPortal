@@ -7,15 +7,15 @@ import LinkTab from '../components/LinkTab.vue';
 
 <template>
   
-  <main class="space-y-14 mb-10 container mx-auto min-h-screen pb-8 w-11/12 sm:pb-10 sm:w-9/12 md:w-7/12">
-    <header class="rounded-md flex flex-col-reverse my-16 mx-4  py-10 justify-between md:flex-row md:items-center">
+  <main class="container w-11/12 min-h-screen pb-8 mx-auto mb-10 space-y-14 sm:pb-10 sm:w-9/12 md:w-7/12">
+    <header class="flex flex-col-reverse justify-between py-10 mx-4 my-16 rounded-md md:flex-row md:items-center">
       <div id="top" class="md:w-8/12">
         <div class="space-y-2">
-          <div class="font-semibold text-xl  md:text-3xl text-neutral-200">
+          <div class="text-xl font-semibold md:text-3xl text-neutral-200">
             <h1>Self taught</h1>
             <h1><a href="https://www.w3schools.com/whatis/whatis_frontenddev.asp?utm_source=wolmer.me" target="_blank"
                 rel="noreferrer noopener"
-                class="cursor-help border-b-2 font-poppin border-neutral-500 text-neutral-500">Frontend</a>
+                class="border-b-2 cursor-help font-poppin border-neutral-500 text-neutral-500">Frontend</a>
               web developer
               <br> and a Web3 enthusiast 
             </h1>
@@ -39,7 +39,7 @@ import LinkTab from '../components/LinkTab.vue';
           <div v-if="status">
     <div v-if="status.listening_to_spotify == true" class="flex items-center gap-2"> 
         <span>
-            <i class='bx bxl-spotify text-2xl' style='color:#4eef3c' aria-hidden="true" ></i>
+            <i class='text-2xl bx bxl-spotify' style='color:#4eef3c' aria-hidden="true" ></i>
         </span>
         
         <p class="inline">
@@ -51,7 +51,7 @@ import LinkTab from '../components/LinkTab.vue';
     </div>
     <div v-else>
         <div v-if=" status.discord_status == 'online' " class="flex items-center gap-2"> 
-            <i class='bx bx-radio-circle-marked animate-pulse  text-2xl' style='color:#3ba45c'  ></i>
+            <i class='text-2xl bx bx-radio-circle-marked animate-pulse' style='color:#3ba45c'  ></i>
            
             
             <p class="inline">
@@ -69,7 +69,7 @@ import LinkTab from '../components/LinkTab.vue';
             </p>
         </div>
         <div v-if="status.discord_status == 'offline' " class="flex items-center gap-2"> 
-            <i class='bx bx-radio-circle text-2xl' style='color:#747f8d'  ></i>
+            <i class='text-2xl bx bx-radio-circle' style='color:#747f8d'  ></i>
             
             <p class="inline">
                 <span class="">Offline</span> 
@@ -81,8 +81,8 @@ import LinkTab from '../components/LinkTab.vue';
     </div>
     
     <div v-if="loading" class="flex space-x-2 animate-pulse" >
-      <div class="p-2 ml-1 rounded-full bg-neutral-700 inline-flex animate-pulse"></div>
-        <div class="bg-neutral-700 inline-flex px-14 py-2 rounded-full animate-pulse"></div>
+      <div class="inline-flex p-2 ml-1 rounded-full bg-neutral-700 animate-pulse"></div>
+        <div class="inline-flex py-2 rounded-full bg-neutral-700 px-14 animate-pulse"></div>
     </div> 
         </div>
     <LinkTab />
@@ -93,16 +93,16 @@ import LinkTab from '../components/LinkTab.vue';
       
       
   
-      <div class="rounded-full mb-4 md:mb-0">
-        <div id="pfp-bg" class="block rounded-full shadow-md shadow-green-600 mx-auto -mt-16 h-48 w-48 bg-cover bg-center select-none">
+      <div class="mb-4 rounded-full md:mb-0">
+        <div id="pfp-bg" class="block w-48 h-48 mx-auto -mt-16 bg-center bg-cover rounded-full shadow-md select-none shadow-green-600">
          
         </div>
       </div>
     </header>
     
     <section id="me" class="my-16">
-      <h3 class="text-lg font-poppin font-bold text-neutral-700 px-4  uppercase">Me</h3>
-      <div class="mt-4 grid gap-4 md:grid-cols-2">
+      <h3 class="px-4 text-lg font-bold uppercase font-poppin text-neutral-700">Me</h3>
+      <div class="grid gap-4 mt-4 md:grid-cols-2">
         <RouterLink to="repos">
         <ContentGrid
           descrip="Browse the list of my projects and open source github code here."
@@ -130,14 +130,14 @@ import LinkTab from '../components/LinkTab.vue';
 
 
   </main>
-  <div class="w-full py-4 bg-neutral-800 text-gray-200">
-        <div class="mx-auto px-4 w-11/12 sm:w-9/12 md:w-7/12">
+  <div class="w-full py-4 text-gray-200 bg-neutral-800">
+        <div class="w-11/12 px-4 mx-auto sm:w-9/12 md:w-7/12">
             <div class="space-y-4 text-center sm:space-y-0 sm:space-x-6 sm:text-left">
                 <a href="mailto:contact@wolmer.me" target="_blank"
-                    class=" font-poppin text-center sm:truncate hover:underline">contact@wolmer.me</a>
+                    class="text-center  font-poppin sm:truncate hover:underline">contact@wolmer.me</a>
                     <br>
                     <a href="https://status.wolmer.me" target="_blank"
-                            class=" font-poppin text-center sm:truncate hover:underline"><i class='bx bx-station inline text-lg' style='color:#e5e7eb' ></i> Status</a>
+                            class="text-center  font-poppin sm:truncate hover:underline"><i class='inline text-lg bx bx-station' style='color:#e5e7eb' ></i> Status</a>
             </div>
         </div>
     </div>
