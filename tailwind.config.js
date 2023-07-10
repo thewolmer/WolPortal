@@ -1,29 +1,18 @@
-//  @type {import('tailwindcss').Config} 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./index.html",
-    "./src/**/*.{vue,js,ts,jsx,tsx}",
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
-
-      fontFamily:{
-        poppin: ["Work Sans", "sans-sans-serif"],
-        // satisfy: ["Satisfy", "cursive"],
-        // secular: ["Secular One", "sans-serif"],
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
-
-      colors: {
-        'wolgray': '#737373', 
-        'wolblack': '#171717',
-        'wolwhite': '#c6c6c6',
-        'default': '#1d1d1d',
-        'active': '#202020',
     },
-    animation: {
-      'spin-slow': 'spin 3s linear infinite',
-    }
   },
   plugins: [],
-}
 }
