@@ -4,7 +4,7 @@
   "editor.formatOnSave": true,
   "editor.fontSize": 15,
   "editor.wordWrap": "on",
-  "editor.formatOnPaste": true,
+  "security.workspace.trust.untrustedFiles": "open",
   "editor.accessibilitySupport": "off",
   "editor.minimap.renderCharacters": false,
   "editor.minimap.showSlider": "always",
@@ -54,8 +54,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnType": true
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
   // git
@@ -68,6 +67,7 @@
     "postcss": "css"
   },
   // discord presence
+  "discord.removeDetails": true,
   "discord.removeRemoteRepository": true,
   // vue
   "vetur.format.defaultFormatter.js": "prettier-eslint",
