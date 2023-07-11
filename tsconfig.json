@@ -21,8 +21,8 @@
     ],
     "baseUrl": "./app",
     "paths": {
-      "@element/*": ["_components/elements/*"],
-      "@module/*": ["_components/modules/*"],
+      "@element/*": ["_components/_elements/*"],
+      "@module/*": ["_components/_modules/*"],
       "@context/*": ["./_context/*"],
       "@hook/*": ["./_hooks/*"],
       "@util/*": ["./_utils/*"],

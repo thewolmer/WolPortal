@@ -10,7 +10,7 @@
   -webkit-tap-highlight-color: transparent;
   }
 
-html.dark {
+html {
   color-scheme: dark;
 }
 
