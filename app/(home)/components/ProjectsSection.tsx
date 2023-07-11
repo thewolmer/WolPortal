@@ -1,8 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
 
-import { Image } from '@element/Image';
-
 const nftProjects = [
   {
     name: 'Moonie Moo',

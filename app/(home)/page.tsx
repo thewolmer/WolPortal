@@ -1,13 +1,14 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
+import { getDiscordStatus } from '@api/Discord';
 import { ContentGrid } from '@module/ContentGrid';
 
 import LinkTab from './components/LinkTab';
 import ProjectsSection from './components/ProjectsSection';
 import TechUsed from './components/TechUsed';
 
-export default function Home() {
+async function Home() {
+  const status = await getDiscordStatus();
   return (
     <main className="container w-11/12 min-h-screen pb-8 mx-auto mb-10 space-y-14 sm:pb-10 sm:w-9/12 md:w-7/12 ">
       <header className="flex flex-col-reverse justify-between py-10 mx-4 my-16 rounded-md md:flex-row md:items-center">
@@ -59,6 +60,7 @@ export default function Home() {
               </a>
               and much more.
             </p>
+            {status?.data.discord_status}
             <LinkTab />
           </div>
         </div>
@@ -101,3 +103,5 @@ export default function Home() {
     </main>
   );
 }
+
+export default Home;

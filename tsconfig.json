@@ -23,6 +23,7 @@
     "paths": {
       "@element/*": ["_components/_elements/*"],
       "@module/*": ["_components/_modules/*"],
+      "@constant/*": ["_constants/*"],
       "@context/*": ["./_context/*"],
       "@hook/*": ["./_hooks/*"],
       "@util/*": ["./_utils/*"],
