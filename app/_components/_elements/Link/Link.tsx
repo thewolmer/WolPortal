@@ -33,7 +33,7 @@ export const Link: React.FC<Props> = ({ href, children, className, target, ...pr
   }
 
   const url = new URL(href);
-  url.searchParams.append('utm_source', 'mooniemoo.io');
+  url.searchParams.append('utm_source', 'wolmer.me');
 
   return (
     <a href={`${url.toString()}`} target="_blank" rel="noopener" className={className} {...props}>

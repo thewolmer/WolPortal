@@ -1,9 +1,4 @@
 export interface Lanyard {
-  data: Data;
-  success: boolean;
-}
-
-export interface Data {
   spotify: Spotify;
   discord_user: DiscordUser;
   activities: Activity[];

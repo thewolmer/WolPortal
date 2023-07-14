@@ -1,9 +1,21 @@
 //** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: false,
+  swcMinify: true,
   trailingSlash: true,
   images: {
-    domains: ['cdn.discordapp.com', 'mooniemoo.io'],
-    path: '/*',
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'wolmer.me',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.scdn.co',
+        pathname: '/**',
+      },
+    ],
   },
 };
 

@@ -11,5 +11,5 @@ export const getDiscordStatus = async (): Promise<Lanyard | undefined> => {
 
   const data = await res.json();
 
-  return data;
+  return data.data;
 };

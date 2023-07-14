@@ -27,7 +27,7 @@
       "@context/*": ["./_context/*"],
       "@hook/*": ["./_hooks/*"],
       "@util/*": ["./_utils/*"],
-      "@api/*": ["./_api/*"],
+      "@api/*": ["./api/*"],
       "@type/*": ["./_types/*"],
       "@style/*": ["./_styles/*"]
     }
