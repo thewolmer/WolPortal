@@ -1,7 +1,9 @@
+import { discord } from '@constant/index';
+
 import { Spotify } from '@type/Lanyard';
 
 export const getNowPlaying = async (): Promise<Spotify | undefined> => {
-  const res = await fetch('/api/spotify/', {
+  const res = await fetch(`https://api.lanyard.rest/v1/users/${discord}`, {
     cache: 'no-store',
   });
 
@@ -9,5 +11,5 @@ export const getNowPlaying = async (): Promise<Spotify | undefined> => {
 
   const data = await res.json();
 
-  return data.data.now_playing;
+  return data.data.spotify;
 };
