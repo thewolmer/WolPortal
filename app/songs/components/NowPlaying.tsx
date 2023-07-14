@@ -43,7 +43,7 @@ const NowPlaying = () => {
             Now Listening on Spotify
           </h2>
           <div>
-            <div className="flex flex-col items-center justify-center w-1/2 mx-auto tracking-wide text-center md:text-base font-poppin text-neutral-300">
+            <div className="flex flex-col items-center justify-center w-1/2 mx-auto tracking-wide text-center md:text-base  text-neutral-300">
               <h3 className="text-sm text-wolgray">{artists}</h3>
               <h3 className="text-wolwhite">{spotifyData.song}</h3>
             </div>

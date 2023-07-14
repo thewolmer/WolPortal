@@ -32,7 +32,7 @@ const TopArtists = async () => {
                   </div>
                   <div className="flex flex-col justify-end flex-grow">
                     <h1 className="mb-1 font-bold tracking-tight text-center text-md text-wolgray">{item.name}</h1>
-                    <p className="text-sm text-center capitalize font-poppin text-wolgray">{item.genres[0]}</p>
+                    <p className="text-sm text-center capitalize  text-wolgray">{item.genres[0]}</p>
                   </div>
                 </div>
               </Link>

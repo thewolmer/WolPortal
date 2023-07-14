@@ -13,14 +13,14 @@ function Home() {
       <header className="flex flex-col-reverse justify-between py-10 mx-4 my-16 rounded-md md:flex-row md:items-center">
         <div id="top" className="md:w-8/12">
           <div className="space-y-2">
-            <div className="text-xl font-semibold md:text-3xl text-neutral-200">
+            <div className="text-xl font-extrabold md:text-3xl text-white/75">
               <h1>Self taught</h1>
-              <h1 className="space-x-1">
+              <h1 className="space-x-2">
                 <a
                   href="https://www.w3schools.com/whatis/whatis_frontenddev.asp?utm_source=wolmer.me"
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="border-b-2 cursor-help font-poppin border-neutral-500 text-neutral-500"
+                  className="border-b-1 cursor-help border-neutral-500 text-neutral-500"
                 >
                   Frontend
                 </a>
@@ -28,38 +28,42 @@ function Home() {
                 <br /> and a Web3 enthusiast
               </h1>
             </div>
-            <div className="text-wolgray font-poppin">
-              <p className="">
+            <div className="inline-block text-wolgray">
+              <p className="whitespace-pre-line">
                 Hi there, My e-name is Wolmer. I am a self-taught web developer based in India. I build complex web apps
                 using frameworks like
-              </p>
-              <div className="flex flex-wrap items-center">
-                <a
-                  href="https://vuejs.org/?utm_source=wolmer.me"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="mr-2 description-link linked-white"
-                >
-                  Vue.js
-                </a>
-                <a
-                  href="https://reactjs.org/?utm_source=wolmer.me"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="mr-2 description-link linked-white"
-                >
-                  React.js
-                </a>
-                <a
-                  href="https://tailwindcss.com/?utm_source=wolmer.me"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="mr-2 description-link linked-white"
-                >
-                  Tailwind CSS
-                </a>
+                <span className="ml-1 nowrap">
+                  <a
+                    href="https://vuejs.org/?utm_source=wolmer.me"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="mr-2 description-link linked-white"
+                  >
+                    Vue.js
+                  </a>
+                </span>
+                <span className="nowrap">
+                  <a
+                    href="https://reactjs.org/?utm_source=wolmer.me"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="mr-2 description-link linked-white"
+                  >
+                    React.js
+                  </a>
+                </span>
+                <span className="nowrap">
+                  <a
+                    href="https://tailwindcss.com/?utm_source=wolmer.me"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="mr-2 description-link linked-white"
+                  >
+                    Tailwind CSS
+                  </a>
+                </span>
                 <span>and much more.</span>
-              </div>
+              </p>
             </div>
 
             <Lanyard />
@@ -75,7 +79,7 @@ function Home() {
       </header>
 
       <section id="me" className="my-16">
-        <h3 className="px-4 text-lg font-bold uppercase font-poppin text-neutral-700">Me</h3>
+        <h3 className="px-4 text-lg font-bold uppercase text-neutral-700">Me</h3>
         <div className="grid gap-4 mt-4 md:grid-cols-2">
           <Link href="repos">
             <ContentGrid

@@ -2,7 +2,7 @@ import React from 'react';
 
 const TechUsed = () => (
   <section id="technologies" className="mt-6">
-    <h3 className="px-4 text-lg font-bold uppercase text-neutral-700 font-poppin ">Technologies I use</h3>
+    <h3 className="px-4 text-lg font-bold uppercase text-neutral-700  ">Technologies I use</h3>
     <div className="flex flex-col mt-8 space-y-6">
       <section>
         <h5 className="pb-2 mx-4 mb-4 text-lg font-medium border-b border-neutral-600/10 text-neutral-600/70">

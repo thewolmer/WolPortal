@@ -2,7 +2,7 @@ import { Spotify } from '@type/Lanyard';
 
 export const getNowPlaying = async (): Promise<Spotify | undefined> => {
   const res = await fetch('/api/spotify/', {
-    cache: 'default',
+    cache: 'no-store',
   });
 
   if (!res.ok) return;

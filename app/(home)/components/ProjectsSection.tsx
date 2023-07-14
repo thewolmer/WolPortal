@@ -65,7 +65,7 @@ const ProjectsSection = () => (
     <div>
       <div>
         <div className="flex items-center justify-between gap-4">
-          <h3 className="px-4 text-lg font-bold uppercase font-poppin text-neutral-700">Web-3 Projects</h3>
+          <h3 className="px-4 text-lg font-bold uppercase text-neutral-700">Web-3 Projects</h3>
         </div>
       </div>
       <div className="grid gap-2 mt-4 space-y-2">
@@ -77,10 +77,10 @@ const ProjectsSection = () => (
             className="flex items-center justify-between h-32 p-4 overflow-hidden transition-colors rounded-md cursor-pointer linked-white focus-ring bg-neutral-800/40"
             rel="noopener"
           >
-            <div className="overflow-x-hidden">
-              <h2 className="font-medium truncate text-neutral-100 font-poppin">{project.name}</h2>
-              <p className="text-neutral-500 line-clamp-2">{project.descrip}</p>
-              <p className="pt-2 text-sm text-neutral-500 font-poppin">
+            <div className="overflow-x-hidden text-white/30">
+              <h2 className="font-medium truncate text-wolwhite">{project.name}</h2>
+              <p className="pt-2 line-clamp-2">{project.descrip}</p>
+              <p className="pt-2 text-sm ">
                 {project.start} - {project.end}
               </p>
             </div>
@@ -92,7 +92,7 @@ const ProjectsSection = () => (
     <div>
       <div>
         <div className="flex items-center justify-between gap-4 ">
-          <h3 className="px-4 text-lg font-bold uppercase font-poppin text-neutral-700"> Dev Projects</h3>
+          <h3 className="px-4 text-lg font-bold uppercase text-neutral-700"> Dev Projects</h3>
         </div>
       </div>
       <div className="grid gap-2 mt-4 space-y-2">
@@ -104,10 +104,10 @@ const ProjectsSection = () => (
             className="flex items-center justify-between h-32 p-4 space-x-4 overflow-hidden transition-colors rounded-md cursor-pointer linked-white focus-ring bg-neutral-800/40"
             rel="noopener"
           >
-            <div className="overflow-x-hidden">
-              <h2 className="font-medium truncate text-neutral-100 font-poppin">{project.name}</h2>
-              <p className="text-neutral-500 line-clamp-2">{project.descrip}</p>
-              <p className="pt-2 text-sm text-neutral-500 font-poppin">
+            <div className="overflow-x-hidden text-white/30">
+              <h2 className="font-medium truncate text-wolwhite">{project.name}</h2>
+              <p className="pt-2 line-clamp-2">{project.descrip}</p>
+              <p className="pt-2 text-sm ">
                 {project.start} - {project.end}
               </p>
             </div>

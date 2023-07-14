@@ -24,6 +24,6 @@ module.exports = {
         'spin-slow': 'spin 3s linear infinite',
       },
     },
-    plugins: [],
   },
+  plugins: [require('@tailwindcss/typography')],
 };
