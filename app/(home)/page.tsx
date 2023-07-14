@@ -1,20 +1,11 @@
 import Link from 'next/link';
 
 import { ContentGrid } from '@module/ContentGrid';
-import { generateSeo } from '@util/generateSeo';
 
 import Lanyard from './components/Lanyard';
 import LinkTab from './components/LinkTab';
 import ProjectsSection from './components/ProjectsSection';
 import TechUsed from './components/TechUsed';
-
-export const generateMetadata = () =>
-  generateSeo({
-    title: 'WolPortal',
-    description:
-      'Explore the website of Wolmer a.k.a Karan Roy, a young web developer with a passion for gaming, VFX, and Film-making. Browse for Web3 projects and much more! Contact to discuss potential projects.',
-    url: '/',
-  });
 
 function Home() {
   return (
