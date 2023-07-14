@@ -19,10 +19,10 @@ const LanyardComponent = () => {
 
     fetchData();
   }, []);
-
   const renderStatus = () => {
     if (status?.listening_to_spotify) {
       const { artist, song, album } = status.spotify;
+      const artistSliced = artist?.split(';').slice(0, 2).join(';');
       return (
         <div className="flex items-center gap-2 text-wolgray ">
           <span className="flex items-center justify-center animate-pulse">
@@ -32,7 +32,7 @@ const LanyardComponent = () => {
           <p className="space-x-2 overflow-hidden nowrap text-ellipsis">
             <span>Listening to</span>
             <span className="font-bold">{song}</span> by
-            <span className="">{artist.length > 22 ? `${artist.slice(0, 22)}...` : artist}</span>
+            <span className="">{artistSliced}</span>
           </p>
         </div>
       );

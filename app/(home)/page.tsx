@@ -86,13 +86,13 @@ function Home() {
           <Link href="songs">
             <ContentGrid description="Music connects people. Check out my recently played songs." title="Songs" />
           </Link>
-          <Link href="sponsor">
+          <Link href="blogs">
             <ContentGrid
-              description="Want to support me and my work, so that i can create more cool stuff?"
-              title="Sponsor"
+              description="Stories about my life, development, my experiences, and much more!"
+              title="Blogs"
             />
           </Link>
-          <Link href="connect">
+          <Link href="contact">
             <ContentGrid
               description="Need help with anything? Want to get in touch? Send me a message!"
               title="Contact"

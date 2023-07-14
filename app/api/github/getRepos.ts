@@ -1,6 +1,6 @@
 import axios, { AxiosError } from 'axios';
 
-import { githubUsername } from '@constant/index';
+import { github } from '@constant/index';
 
 import { Repos } from '@type/Repos';
 
@@ -11,7 +11,7 @@ interface ErrorResponse {
 
 export const getRepos = async (): Promise<Repos[] | undefined> => {
   try {
-    const response = await axios.get(`https://api.github.com/users/${githubUsername}/repos`, {
+    const response = await axios.get(`https://api.github.com/users/${github}/repos`, {
       params: {
         sort: 'updated',
         direction: 'desc',

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { repository } from '@constant/index';
 import { Image } from '@element/Image';
 import { Link } from '@element/Link';
 
@@ -15,7 +16,7 @@ const Footer = () => (
       <hr className="my-6 border-gray-700 sm:mx-auto lg:my-8" />
       <span className="block text-sm text-gray-400 sm:text-center">
         This Website is Open Source{' '}
-        <Link href="https://github.com/thewolmer/WolPortal" className=" linked-white">
+        <Link href={repository} className="linked-white">
           on Github
         </Link>
         .

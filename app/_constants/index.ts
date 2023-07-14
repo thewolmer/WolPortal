@@ -1,3 +1,12 @@
-export const domain = 'https://wolmer.me';
-export const discordId = '932865250930360331';
-export const githubUsername = 'thewolmer';
+export const domain = 'wolmer.me';
+export const url = 'https://wolmer.me';
+export const repository = 'https://github.com/thewolmer/WolPortal.git';
+export const discord = '932865250930360331';
+export const twitter = 'WolmerTweets';
+export const github = 'thewolmer';
+export const linkedin = 'thewolmer';
+export const instagram = 'thewolmer';
+export const opensea = 'thewolmer';
+export const spotify = '31fph23qi2hh55jwun56gn4hf2oe?si=AmyAYdjqQWmGu-XKhmeL3g';
+export const snapchat = 'thewolmer';
+export const clubhouse = 'thewolmer';
