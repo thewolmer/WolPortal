@@ -1,5 +1,3 @@
-import { discordId } from '@constant/index';
-
 import { Spotify } from '@type/Lanyard';
 
 export const getNowPlaying = async (): Promise<Spotify | undefined> => {
