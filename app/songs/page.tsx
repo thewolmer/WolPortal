@@ -5,10 +5,18 @@ import { Image } from '@element/Image';
 import { Link } from '@element/Link';
 import ErrorComponent from '@module/ErrorComponent';
 import Header from '@module/Header';
+import { generateSeo } from '@util/generateSeo';
 
 import NowPlaying from './components/NowPlaying';
 import TopArtists from './components/TopArtists';
 import TopTracks from './components/TopTracks';
+
+export const generateMetadata = () =>
+  generateSeo({
+    title: 'Songs // WolPortal',
+    description: 'Browse daily songs of Wolmer',
+    url: '/Songs',
+  });
 
 const Page = async () => {
   const response = await getTopTracks();

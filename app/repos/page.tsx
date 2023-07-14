@@ -4,8 +4,16 @@ import { getRepos } from '@api/github';
 import { Link } from '@element/Link';
 import ErrorComponent from '@module/ErrorComponent';
 import Header from '@module/Header';
+import { generateSeo } from '@util/generateSeo';
 
 import { Repos } from '@type/Repos';
+
+export const generateMetadata = () =>
+  generateSeo({
+    title: 'Repos // WolPortal',
+    description: 'Browse Repositories and open source code of Wolmer',
+    url: '/repos',
+  });
 
 type language = string;
 

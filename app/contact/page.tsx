@@ -4,6 +4,14 @@ import { github, instagram, linkedin, opensea, snapchat, spotify, twitter } from
 import { Link } from '@element/Link';
 import { ContentGrid } from '@module/ContentGrid';
 import Header from '@module/Header';
+import { generateSeo } from '@util/generateSeo';
+
+export const generateMetadata = () =>
+  generateSeo({
+    title: 'Contact // WolPortal',
+    description: 'Get in touch with Wolmer',
+    url: '/contact',
+  });
 
 const links = [
   {

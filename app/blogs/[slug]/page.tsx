@@ -4,8 +4,16 @@ import matter from 'gray-matter';
 import Markdown from 'markdown-to-jsx';
 import { notFound } from 'next/navigation';
 
+import { generateSeo } from '@util/generateSeo';
 import getPostMetadata from '@util/getPostMetadata';
 import { options } from '@util/markdownOptions';
+
+export const generateMetadata = () =>
+  generateSeo({
+    title: 'Blog // WolPortal',
+    description: 'Read the Blog by Wolmer',
+    url: '/repos',
+  });
 
 const getPostContent = (slug: string) => {
   const folder = 'app/blogs/posts/';

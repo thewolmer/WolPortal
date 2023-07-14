@@ -9,9 +9,8 @@ import { Link } from '@element/Link';
 const Footer = () => {
   const pathname = usePathname();
   const isBlogRoute = pathname.startsWith('/blogs/') && pathname !== '/blogs/';
-  console.log(isBlogRoute);
   return (
-    <footer className="p-4 text-gray-200 rounded-lg shadow  md:px-6 md:py-8 bg-neutral-800 bg-grad">
+    <footer className="p-4 text-gray-200 rounded-lg shadow md:px-6 md:py-8 bg-neutral-800 bg-grad">
       <div className="container w-11/12 pb-8 mx-auto sm:pb-10 sm:w-9/12 md:w-7/12">
         <div className="mb-10 sm:flex sm:items-center sm:justify-between">
           <Link href={isBlogRoute ? '/blogs' : '/'} className="flex items-center mb-4 sm:mb-0">

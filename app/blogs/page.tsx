@@ -1,6 +1,14 @@
+import { generateSeo } from '@util/generateSeo';
 import getPostMetadata from '@util/getPostMetadata';
 
 import PostPreview from './components/PostPreview';
+
+export const generateMetadata = () =>
+  generateSeo({
+    title: 'Blogs // WolPortal',
+    description: 'Wolmer Blogs',
+    url: '/blogs',
+  });
 
 const HomePage = () => {
   const postMetadata = getPostMetadata();
