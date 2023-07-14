@@ -1,7 +1,5 @@
 import { Metadata } from 'next';
 
-import { domain } from '@constant/index';
-
 interface Props {
   title: string;
   description: string;
@@ -21,7 +19,7 @@ export const generateSeo = ({ title, description, url, image }: Props): Metadata
     type: 'website',
     images: [
       {
-        url: image ? image : `/wolportal-social.jpeg`,
+        url: image ? image : '/wolportal-social.jpg',
         width: 640,
         height: 321,
       },
@@ -34,7 +32,7 @@ export const generateSeo = ({ title, description, url, image }: Props): Metadata
     description,
     images: [
       {
-        url: image ? image : `/wolportal-social.jpeg`,
+        url: image ? image : '/wolportal-social.jpg',
         width: 641,
         height: 321,
       },
