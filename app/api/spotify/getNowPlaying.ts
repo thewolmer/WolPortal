@@ -1,4 +1,4 @@
-import { discord } from '@constant/index';
+import { discord } from '@constant/global';
 
 import { Spotify } from '@type/Lanyard';
 

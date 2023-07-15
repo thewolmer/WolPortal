@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { github, instagram, linkedin, opensea, snapchat, spotify, twitter } from '@constant/index';
+import { github, instagram, linkedin, opensea, snapchat, spotify, twitter } from '@constant/global';
 import { Link } from '@element/Link';
 import { ContentGrid } from '@module/ContentGrid';
 import Header from '@module/Header';

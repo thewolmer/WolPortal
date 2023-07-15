@@ -2,7 +2,7 @@
 import { usePathname } from 'next/navigation';
 import React from 'react';
 
-import { repository } from '@constant/index';
+import { repository } from '@constant/global';
 import { Image } from '@element/Image';
 import { Link } from '@element/Link';
 

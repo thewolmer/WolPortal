@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { github, instagram, linkedin, twitter } from '@constant/index';
+import { github, instagram, linkedin, twitter } from '@constant/global';
 import { Link } from '@element/Link';
 
 const LinkTab = () => (

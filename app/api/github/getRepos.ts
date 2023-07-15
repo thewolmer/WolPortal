@@ -1,28 +1,19 @@
-import axios, { AxiosError } from 'axios';
-
-import { github } from '@constant/index';
+import { github } from '@constant/global';
 
 import { Repos } from '@type/Repos';
 
-interface ErrorResponse {
-  status: number;
-  statusText: string;
-}
-
 export const getRepos = async (): Promise<Repos[] | undefined> => {
   try {
-    const response = await axios.get(`https://api.github.com/users/${github}/repos`, {
-      params: {
-        sort: 'updated',
-        direction: 'desc',
-      },
+    const res = await fetch(`https://api.github.com/users/${github}/repos?sort=pushed&direction=desc`, {
+      cache: 'no-store',
     });
 
-    const { data } = response;
+    if (!res.ok) return;
+
+    const data = await res.json();
 
     return data;
-  } catch (error: any) {
-    // const { status, statusText } = error.response;
+  } catch (error: unknown) {
     console.error(error);
     return;
   }
