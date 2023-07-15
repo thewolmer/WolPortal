@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 
+import { httpsurl } from '@constant/global';
+
 interface Props {
   title: string;
   description: string;
@@ -10,6 +12,7 @@ interface Props {
 export const generateSeo = ({ title, description, url, image }: Props): Metadata => ({
   title,
   description,
+  metadataBase: new URL(httpsurl),
   openGraph: {
     title,
     description,

@@ -1,5 +1,5 @@
 export const domain = 'wolmer.me';
-export const url = 'https://wolmer.me';
+export const httpsurl = 'https://wolmer.me';
 export const repository = 'https://github.com/thewolmer/WolPortal.git';
 export const discord = '932865250930360331';
 export const twitter = 'WolmerTweets';
