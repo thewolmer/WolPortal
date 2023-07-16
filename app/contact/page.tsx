@@ -29,11 +29,11 @@ const links = [
     description: 'Say hi! on LinkedIn',
     link: `https://www.linkedin.com/in/${linkedin}`,
   },
-  {
-    label: 'Instagram',
-    description: 'Follow me on Instagram',
-    link: `https://instagram.com/${instagram}`,
-  },
+  // {
+  //   label: 'Instagram',
+  //   description: 'Follow me on Instagram',
+  //   link: `https://instagram.com/${instagram}`,
+  // },
   {
     label: 'Spotify',
     description: 'Follow me on Spotify',
