@@ -1,10 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
-import FadeUp from '@animation/Fadeup';
-import Reveal from '@animation/Reveal';
 import { motion } from 'framer-motion';
 import React from 'react';
 
+import Reveal from '@animation/Reveal';
 import { fadeInUp } from '@util/animations';
 
 const nftProjects = [

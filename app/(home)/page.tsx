@@ -1,6 +1,6 @@
-import Reveal from '@animation/Reveal';
 import Link from 'next/link';
 
+import Reveal from '@animation/Reveal';
 import { ContentGrid } from '@module/ContentGrid';
 
 import Lanyard from './components/Lanyard';
