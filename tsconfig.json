@@ -29,7 +29,8 @@
       "@util/*": ["./_utils/*"],
       "@api/*": ["./api/*"],
       "@type/*": ["./_types/*"],
-      "@style/*": ["./_styles/*"]
+      "@style/*": ["./_styles/*"],
+      "@animation/*": ["./_elements/Animation/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/providers.js"],

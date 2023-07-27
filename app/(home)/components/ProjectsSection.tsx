@@ -1,5 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
+'use client';
+import FadeUp from '@animation/Fadeup';
+import Reveal from '@animation/Reveal';
+import { motion } from 'framer-motion';
 import React from 'react';
+
+import { fadeInUp } from '@util/animations';
 
 const nftProjects = [
   {
@@ -62,60 +68,66 @@ const webProjects = [
 
 const ProjectsSection = () => (
   <section id="projects" className="grid gap-x-8 gap-y-24 md:grid-cols-2">
-    <div>
+    <Reveal>
       <div>
-        <div className="flex items-center justify-between gap-4">
-          <h3 className="px-4 text-lg font-bold uppercase text-neutral-700">Web-3 Projects</h3>
+        <div>
+          <div className="flex items-center justify-between gap-4">
+            <h3 className="px-4 text-lg font-bold uppercase text-neutral-700">Web-3 Projects</h3>
+          </div>
+        </div>
+        <div className="grid gap-2 mt-4 space-y-2">
+          {nftProjects.map((project, index) => (
+            <motion.a
+              variants={fadeInUp}
+              key={index}
+              href={project.link}
+              target="_blank"
+              className="flex items-center justify-between h-32 p-4 overflow-hidden transition-colors rounded-md cursor-pointer linked-white focus-ring bg-neutral-800/40"
+              rel="noopener"
+            >
+              <div className="overflow-x-hidden text-white/30">
+                <h2 className="font-medium truncate text-wolwhite">{project.name}</h2>
+                <p className="pt-2 line-clamp-2">{project.descrip}</p>
+                <p className="pt-2 text-sm ">
+                  {project.start} - {project.end}
+                </p>
+              </div>
+            </motion.a>
+          ))}
         </div>
       </div>
-      <div className="grid gap-2 mt-4 space-y-2">
-        {nftProjects.map((project, index) => (
-          <a
-            key={index}
-            href={project.link}
-            target="_blank"
-            className="flex items-center justify-between h-32 p-4 overflow-hidden transition-colors rounded-md cursor-pointer linked-white focus-ring bg-neutral-800/40"
-            rel="noopener"
-          >
-            <div className="overflow-x-hidden text-white/30">
-              <h2 className="font-medium truncate text-wolwhite">{project.name}</h2>
-              <p className="pt-2 line-clamp-2">{project.descrip}</p>
-              <p className="pt-2 text-sm ">
-                {project.start} - {project.end}
-              </p>
-            </div>
-          </a>
-        ))}
-      </div>
-    </div>
+    </Reveal>
     {/*  */}
-    <div>
+    <Reveal>
       <div>
-        <div className="flex items-center justify-between gap-4 ">
-          <h3 className="px-4 text-lg font-bold uppercase text-neutral-700"> Dev Projects</h3>
+        <div>
+          <div className="flex items-center justify-between gap-4 ">
+            <h3 className="px-4 text-lg font-bold uppercase text-neutral-700"> Dev Projects</h3>
+          </div>
+        </div>
+        <div className="grid gap-2 mt-4 space-y-2">
+          {webProjects.map((project, index) => (
+            <motion.a
+              variants={fadeInUp}
+              key={index}
+              href={project.link}
+              target="_blank"
+              className="flex items-center justify-between h-32 p-4 space-x-4 overflow-hidden transition-colors rounded-md cursor-pointer linked-white focus-ring bg-neutral-800/40"
+              rel="noopener"
+            >
+              <div className="overflow-x-hidden text-white/30">
+                <h2 className="font-medium truncate text-wolwhite">{project.name}</h2>
+                <p className="pt-2 line-clamp-2">{project.descrip}</p>
+                <p className="pt-2 text-sm ">
+                  {project.start} - {project.end}
+                </p>
+              </div>
+              <div className="flex-shrink-0"></div>
+            </motion.a>
+          ))}
         </div>
       </div>
-      <div className="grid gap-2 mt-4 space-y-2">
-        {webProjects.map((project, index) => (
-          <a
-            key={index}
-            href={project.link}
-            target="_blank"
-            className="flex items-center justify-between h-32 p-4 space-x-4 overflow-hidden transition-colors rounded-md cursor-pointer linked-white focus-ring bg-neutral-800/40"
-            rel="noopener"
-          >
-            <div className="overflow-x-hidden text-white/30">
-              <h2 className="font-medium truncate text-wolwhite">{project.name}</h2>
-              <p className="pt-2 line-clamp-2">{project.descrip}</p>
-              <p className="pt-2 text-sm ">
-                {project.start} - {project.end}
-              </p>
-            </div>
-            <div className="flex-shrink-0"></div>
-          </a>
-        ))}
-      </div>
-    </div>
+    </Reveal>
   </section>
 );
 
