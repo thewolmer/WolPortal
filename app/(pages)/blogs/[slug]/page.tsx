@@ -16,7 +16,7 @@ export const generateMetadata = () =>
   });
 
 const getPostContent = (slug: string) => {
-  const folder = 'app/blogs/posts/';
+  const folder = 'app/(pages)/blogs/posts/';
   const file = `${folder}${slug}.md`;
   if (fs.existsSync(file)) {
     const content = fs.readFileSync(file, 'utf8');
