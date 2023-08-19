@@ -10,7 +10,7 @@ In the world of NFTs, something exciting is happening. Meet [Moonie Moo NFT](htt
 
 ### Unveiling the Vision
 
-Behind the scenes, [Moonie Moo Team](https://mooniemoo.io/#team?utm_source=wolmer.me) is working tirelessly to bring something revolutionary to the Web3 ecosystem. It's not just about creating NFTs; it's about transforming how we interact with the digital world. The parent company, [MXT](https://mxt.im?utm_source=wolmer.me), is constructing an entire ecosystem that incorporates Discord bot integration, boasting an array of features that are going to be introduced to redefine the Web3 experience.
+Behind the scenes, [Moonie Moo's Team](https://mooniemoo.io/#team?utm_source=wolmer.me) is working tirelessly to bring something revolutionary to the Web3 ecosystem. It's not just about creating NFTs; it's about transforming how we interact with the digital world. The parent company, [MXT](https://mxt.im?utm_source=wolmer.me), is constructing an entire ecosystem that incorporates Discord bot integration, boasting an array of features that are going to be introduced to redefine the Web3 experience.
 
 ### Moonie Moo NFT's Delightful Touch
 
