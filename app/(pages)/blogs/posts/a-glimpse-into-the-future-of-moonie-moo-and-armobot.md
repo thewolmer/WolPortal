@@ -6,7 +6,17 @@ date: '2023-08-19'
 
 ## Meet the billionaire cow 'Moonie Moo'
 
-In the world of NFTs, something exciting is happening. Meet [Moonie Moo NFT](https://mooniemoo.io?utm_source=wolmer.me), a special project led by the creator of "Bob the Builder" and "Paw Patrol," Keith Chapman. But Moonie Moo NFT is not just about fun characters; it's building a bridge between two kinds of internet: the old one and the new one.
+In the world of NFTs, something exciting is happening. Meet [Moonie Moo NFT](https://mooniemoo.io?utm_source=wolmer.me), a special project led by the creator of "Bob the Builder" and "PAW Patrol," Keith Chapman. But Moonie Moo NFT is not just about fun NFT characters, its an evolving TV Cartoon series; it's building a bridge between two kinds of internet: the old one.
+
+### Moonie Moo's Animation bible: Journey into Animation and Broadcast
+
+Just few months ago, Moonie Moo announced its partnership with [Factory Create](https://www.factorycreate.com/?utm_source=wolmer.me), a renowned name in the animation industry. This collaboration has yielded an extraordinary result — a world-class animation bible that lays the foundation for an immersive animated TV series. Co-Founder [Martin Aram](https://x.com/MrMartin_eth?utm_source=wolmer.me) is now taking the next bold step — pitching the TV series to leading broadcasters in the United States. This move not only underscores Moonie Moo's dedication to delivering the Roadmap they've promised in web3 but also positions the brand as an upcoming player in the television industry.
+
+### LIGHTS, CAMERA, ACTION......GO MOONIE MOO!!!
+
+The _13th of August_ marked a significant milestone in life of Keith Chapman. Founders Keith Chapman and Martin Aram took center stage on SRF Switzerland, a German-speaking news channel, to celebrate the 10th Anniversary of PAW Patrol, a testament to Keith Chapman's creative genius. This momentous occasion provided the perfect platform for an exciting announcement. Chapman and Aram seized the opportunity to give some sneak peaks of their upcoming TV series, Moonie Moo, to the world. Watch the [video here](https://www.srf.ch/play/tv/10-vor-10/video/fokus-der-kreative-kopf-hinter-paw-patrol?urn=urn:srf:video:2f6f8c55-aef5-463f-a25a-00477d37f0c2?utm_source=wolmer.me).
+
+![Keith and Martin on SRF](https://imgur.com/BZ77fOi.png 'SRF')
 
 ### Unveiling the Vision
 
@@ -14,7 +24,7 @@ Behind the scenes, [Moonie Moo's Team](https://mooniemoo.io/#team?utm_source=wol
 
 ### Moonie Moo NFT's Delightful Touch
 
-As Moonie Moo NFT continues to innovate, Moonie Moo V2 'Pimp my Moonie' Feature is adding a charming layer to the NFT. Holders can customize their Moonie Moo PFP and enjoy sharing with others across social media. Picture Moonie Moo in various poses, holding a "good morning" cup, raising a toast, a beer or working on a laptop. This feature is now open for holders [here](https://mooniemoo.io/nft/pimp/?utm_source=wolmer.me)
+As Moonie Moo NFT continues to innovate, Moonie Moo V2 'Pimp my Moonie' Feature is adding a charming layer to the NFT. Holders can customize their Moonie Moo PFP and enjoy sharing with others across social media. Picture Moonie Moo in various poses, holding a "good morning" cup, raising a toast, a beer or working on a laptop. This feature is now open for holders [here](https://mooniemoo.io/nft/pimp/?utm_source=wolmer.me).
 
 ![Moonie Moo Holding A Cup](https://imgur.com/ZeNLYGY.png '104')
 
