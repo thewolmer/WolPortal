@@ -17,10 +17,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   );
 
   return (
-    <main className="relative max-w-2xl min-h-screen px-6 mx-auto md:overflow-visible ">
-      <section className="overflow-hidden">
-        <div className="w-[900px] h-52 bg-[#4b828f] absolute top-60 left-4 blur-3xl opacity-10 rotate-45 "></div>
-      </section>
+    <main className="relative max-w-2xl min-h-screen px-6 mx-auto overflow-hidden md:overflow-visible">
+      <div className="w-[900px] h-52 bg-[#4b828f] absolute top-60 left-4 blur-3xl opacity-10 rotate-45 "></div>
+
       {header}
       {children}
     </main>

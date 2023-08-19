@@ -26,7 +26,7 @@ const LinkSection = () => {
   };
 
   return (
-    <div className="hidden h-full md:absolute -left-36">
+    <div className="absolute h-full -left-36">
       <div className="sticky left-0 flex flex-col items-center justify-center px-2 py-6 my-10 space-y-5 rounded-full shadow-2xl top-10 bg-active">
         <div
           onClick={copyToClipboard}
