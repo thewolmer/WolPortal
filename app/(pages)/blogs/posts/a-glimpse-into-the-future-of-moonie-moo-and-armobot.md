@@ -14,7 +14,7 @@ Behind the scenes, [Moonie Moo Team](https://mooniemoo.io/#team?utm_source=wolme
 
 ### Moonie Moo NFT's Delightful Touch
 
-As Moonie Moo NFT continues to innovate, it's not just about the mechanics; it's about the experience. Moonie Moo V2 'Pimp my Moonie' Feature is adding a charming layer to the NFT. Holders can customize their Moonie Moo PFP and enjoy sharing with others across social media. Picture Moonie Moo in various poses, holding a "good morning" cup, raising a toast, a beer or working on a laptop. This feature is now open for public [here](https://mooniemoo.io/nft/pimp/?utm_source=wolmer.me)
+As Moonie Moo NFT continues to innovate, Moonie Moo V2 'Pimp my Moonie' Feature is adding a charming layer to the NFT. Holders can customize their Moonie Moo PFP and enjoy sharing with others across social media. Picture Moonie Moo in various poses, holding a "good morning" cup, raising a toast, a beer or working on a laptop. This feature is now open for holders [here](https://mooniemoo.io/nft/pimp/?utm_source=wolmer.me)
 
 ![Moonie Moo Holding A Cup](https://imgur.com/ZeNLYGY.png '104')
 
@@ -30,7 +30,7 @@ ArmoBot is like a little computer program with access to a big database that's b
 
 ### ArmoBot's Website: Coming Soon
 
-ArmoBot is getting its own website very soon! It's being developed right now and will be available at **armobot.xyz**. And the exciting part- ArmoBot BETA version is expected to start rolling out by the end of _September 2023_. This version will have lots of cool new things for you to try out. In the meantime Team has already launched [ArmoBot official Twitter handle](https://x.com/Armobot_xyz?utm_source=wolmer.me)
+ArmoBot is getting its official website very soon! It's being developed right now and will be available at **armobot.xyz**. And the exciting part- _ArmoBot BETA version_ is expected to start rolling out by the end of _September 2023_. This version will have lots of cool new things for you to try out. In the meantime Team has already launched [ArmoBot official Twitter handle](https://x.com/Armobot_xyz?utm_source=wolmer.me)
 
 ### Super-powering communities
 
