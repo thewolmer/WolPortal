@@ -1,3 +1,5 @@
+import { Link } from '@element/Link';
+
 export const options = {
   overrides: {
     img: {
@@ -8,6 +10,7 @@ export const options = {
     a: {
       props: {
         className: 'linked-white  text-wolwhite',
+        target: '_blank',
       },
     },
     ul: {
@@ -27,7 +30,7 @@ export const options = {
     },
     blockquote: {
       props: {
-        className: 'border-l-4 border-lime-900',
+        className: 'border-l-4 border-cyan-600',
       },
     },
   },

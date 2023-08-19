@@ -10,8 +10,8 @@ import { Repos } from '@type/Repos';
 
 export const generateMetadata = () =>
   generateSeo({
-    title: 'Repos // WolPortal',
-    description: 'Browse Repositories and open source code of Wolmer',
+    title: 'WolPortal // Repos',
+    description: 'Browse through public GitHub repositories of Wolmer. Explore projects, code, and contributions.',
     url: '/repos',
   });
 

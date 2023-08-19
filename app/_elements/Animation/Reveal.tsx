@@ -21,7 +21,7 @@ const Reveal = ({ children }: Props) => {
 
   return (
     <section ref={rootContainer}>
-      <div ref={ref} className="relative w-full overflow-hidden">
+      <div ref={ref} className="relative w-full">
         <motion.div variants={fadeInUp} initial="hidden" animate={mainControls}>
           {children}
         </motion.div>

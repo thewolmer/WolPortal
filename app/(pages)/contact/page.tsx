@@ -8,8 +8,8 @@ import { generateSeo } from '@util/generateSeo';
 
 export const generateMetadata = () =>
   generateSeo({
-    title: 'Contact // WolPortal',
-    description: 'Get in touch with Wolmer',
+    title: 'WolPortal // Contact',
+    description: 'Connect with Wolmer on various social platforms. Stay updated on my latest activities and reach out.',
     url: '/contact',
   });
 
