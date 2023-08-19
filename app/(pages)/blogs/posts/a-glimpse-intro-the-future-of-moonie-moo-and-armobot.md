@@ -1,0 +1,45 @@
+---
+title: 'A Glimpse into the Future of Moonie Moo NFT and ArmoBot'
+subtitle: 'Behind the scenes, Moonie Moo Team is working tirelessly to bring something revolutionary...'
+date: '2023-08-19'
+---
+
+## Meet the billionaire cow 'Moonie Moo'
+
+In the world of NFTs, something exciting is happening. Meet [Moonie Moo NFT](https://mooniemoo.io?utm_source=wolmer.me), a special project led by the creator of "Bob the Builder" and "Paw Patrol," Keith Chapman. But Moonie Moo NFT is not just about fun characters; it's building a bridge between two kinds of internet: the old one and the new one.
+
+### Unveiling the Vision
+
+Behind the scenes, [Moonie Moo Team](https://mooniemoo.io/#team?utm_source=wolmer.me) is working tirelessly to bring something revolutionary to the Web3 ecosystem. It's not just about creating NFTs; it's about transforming how we interact with the digital world. The parent company, [MXT](https://mxt.im?utm_source=wolmer.me), is constructing an entire ecosystem that incorporates Discord bot integration, boasting an array of features that are going to be introduced to redefine the Web3 experience.
+
+### Moonie Moo NFT's Delightful Touch
+
+As Moonie Moo NFT continues to innovate, it's not just about the mechanics; it's about the experience. Moonie Moo V2 'Pimp my Moonie' Feature is adding a charming layer to the NFT. Holders can customize their Moonie Moo PFP and enjoy sharing with others across social media. Picture Moonie Moo in various poses, holding a "good morning" cup, raising a toast, a beer or working on a laptop. This feature is now open for public [here](https://mooniemoo.io/nft/pimp/?utm_source=wolmer.me)
+
+![Moonie Moo Holding A Cup](https://imgur.com/ZeNLYGY.png '104')
+
+### ArmoBot: Super power web3 bot
+
+At the heart of this innovation lies ArmoBot, a Discord bot with a mission. It's not your average bot; it's a data powerhouse. ArmoBot's sales and listing feature has just been released in [Moonie Moo Discord Server](https://discord.gg/mooniemoo.io?utm_source=wolmer.me). Unlike its competitors, such as _OpenSea's sales bot_, ArmoBot stands out for its unparalleled access to data from all major marketplaces, including Opensea and Blur.
+
+![ArmoBot Listings](https://imgur.com/bE8CE7q.png 'ArmoBot')
+
+### Working of ArmoBot
+
+ArmoBot is like a little computer program with access to a big database that's built using really special tools. It's server is built with [NodeJS](https://nodejs.org/en?utm_source=wolmer.me), the bot itself is built using [Discord.js v15](https://discordjs.dev/#/?utm_source=wolmer.me) and [Discord's API v9](https://discord.com/developers/docs/reference) for talking in Discord. ArmoBot also uses other Third party web3 services such as [Alchemy](https://www.alchemy.com/) and [OpenSea SDK](https://docs.opensea.io/). These tools help ArmoBot collect information quickly and interact in discord.
+
+### ArmoBot's Website: Coming Soon
+
+ArmoBot is getting its own website very soon! It's being developed right now and will be available at **armobot.xyz**. And the exciting part- ArmoBot BETA version is expected to start rolling out by the end of _September 2023_. This version will have lots of cool new things for you to try out. In the meantime Team has already launched [ArmoBot official Twitter handle](https://x.com/Armobot_xyz?utm_source=wolmer.me)
+
+### Super-powering communities
+
+But the story doesn't stop there. ArmoBot is getting even cooler. The creator of ArmoBot [Armands Balodis](https://twitter.com/Armo_MXT?utm_source=wolmer.me) has been teasing the community with many cool features. Whether you're comparing listings, sealing deals, analyzing trends, or simply indulging your NFT curiosity, the ArmoBot is set to be a game-changer.
+![ArmoBot Details](https://imgur.com/0pOtXnI.png 'ArmoBot')
+Imagine having a bot that not only keeps you updated with the latest listings but also empowers you with comprehensive insights and most accurate rarity. ArmoBot doesn't just give you the basics; it equips you with the tools to make informed decisions. Want to know the lowest price for a listing? ArmoBot has your back. This isn't just about saving time; it's about optimizing your NFT journey.
+
+---
+
+This Blog is AI generated.
+The contents of this blog are accurate as of the current date and are subject to updates and modifications.
+To access the latest information and developments, kindly refer to the official sources provided by Moonie Moo NFT and ArmoBot.

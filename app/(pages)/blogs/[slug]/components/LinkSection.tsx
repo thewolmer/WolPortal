@@ -30,7 +30,7 @@ const LinkSection = () => {
       <div className="sticky left-0 flex flex-col items-center justify-center px-2 py-6 my-10 space-y-5 rounded-full shadow-2xl top-10 bg-active">
         <div
           onClick={copyToClipboard}
-          className="flex px-2 py-2 transition rounded-full bg-wolblack drop-shadow-2xl active:ring-4 active:ring-cyan-500 "
+          className="flex items-center justify-center px-2 py-2 transition rounded-full bg-wolblack drop-shadow-2xl active:ring-4 active:ring-cyan-500 "
         >
           <div className="flex items-center justify-center">
             {copied ? (
@@ -46,7 +46,7 @@ const LinkSection = () => {
         </div>
         <div
           onClick={shareOnWhatsApp}
-          className="flex px-2 py-2 transition rounded-full bg-wolblack drop-shadow-2xl active:ring-4 active:ring-cyan-500 "
+          className="flex items-center justify-center px-2 py-2 transition rounded-full bg-wolblack drop-shadow-2xl active:ring-4 active:ring-cyan-500 "
         >
           <div className="flex items-center justify-center">
             <i className="text-2xl bx bxl-whatsapp text-wolgray"></i>
@@ -54,7 +54,7 @@ const LinkSection = () => {
         </div>
         <div
           onClick={shareOnTwitter}
-          className="flex px-2 py-2 transition rounded-full bg-wolblack drop-shadow-2xl active:ring-4 active:ring-cyan-500 "
+          className="flex items-center justify-center px-2 py-2 transition rounded-full bg-wolblack drop-shadow-2xl active:ring-4 active:ring-cyan-500 "
         >
           <div className="flex items-center justify-center">
             <i className="text-2xl bx bxl-twitter text-wolgray"></i>
