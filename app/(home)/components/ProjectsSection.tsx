@@ -27,7 +27,7 @@ const nftProjects = [
     name: 'Jacks Originals',
     descrip:
       ' An NFT collection created to be a brand inside of the metaverse built on ERC-721 token technology on ethereum blockchain.',
-    link: 'https://jacksoriginals.me/?utm_source=wolmer.me',
+    link: '',
     logo: 'https://cdn.discordapp.com/attachments/1060254254591393853/1060348982192242718/jacsorg.png',
     start: 'July-2022',
     end: 'Aug-2022',
@@ -35,7 +35,7 @@ const nftProjects = [
   {
     name: 'Seemeo app',
     descrip: 'A geo-social business networking application  that connects people and places locally.',
-    link: 'https://www.seemeo.app/?utm_source=wolmer.me',
+    link: '',
     logo: 'https://cdn.discordapp.com/attachments/1060254254591393853/1060348982737522748/semo.png',
     start: 'Aug-2022',
     end: 'Oct-2022',
@@ -52,7 +52,7 @@ const webProjects = [
   {
     name: 'Relink Library',
     descrip: 'A Digital Library for my university to access study materials, notes from anywhere on earth.',
-    link: 'https://beta.relinklibrary.com?utm_source=wolmer.me',
+    link: '',
     start: 'Nov-2022',
     end: '',
   },

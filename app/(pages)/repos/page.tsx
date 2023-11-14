@@ -53,7 +53,7 @@ const Page = async () => {
     <main className="container w-11/12 min-h-screen pb-8 mx-auto mb-10 space-y-14 sm:pb-10 sm:w-9/12 md:w-7/12">
       <Header title="Repositories" description="My public posts on github" />
       <div className="grid gap-4 md:grid-cols-2">
-        {repos?.map((repo) => (
+        {repos.map((repo) => (
           <Link href={repo.html_url} key={repo.id}>
             <div className="flex flex-col justify-between h-full p-4 transition-colors rounded-lg cursor-pointer focus-ring text-neutral-500 bg-default hover:bg-active">
               <div className="space-y-2">
