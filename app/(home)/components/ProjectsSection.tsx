@@ -15,7 +15,14 @@ const nftProjects = [
     link: 'https://mooniemoo.io',
     logo: 'https://cdn.discordapp.com/attachments/933379220258820156/1119321509073264720/GrQs2oFi_400x400.png',
     start: 'Sep-2022',
-    end: 'Present',
+    end: 'Apr-2024',
+  },
+  {
+    name: 'ArmoBot by MXT',
+    descrip: 'Multipurpose web3 bot to supercharge web3 community',
+    link: 'https://armobot.xyz',
+    start: 'June-2023',
+    end: 'Apr-2024',
   },
   {
     name: 'Iacon Labs',
@@ -44,13 +51,6 @@ const nftProjects = [
   // },
 ];
 const webProjects = [
-  {
-    name: 'ArmoBot by MXT',
-    descrip: 'Multipurpose web3 bot to supercharge web3 community',
-    link: 'https://armobot.xyz?utm_source=wolmer.me',
-    start: '',
-    end: 'June-2023',
-  },
   {
     name: 'Floor Price Discord bot',
     descrip: 'A discord bot to show floor price of NFT projects by changing nickname',

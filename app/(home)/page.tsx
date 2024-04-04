@@ -13,7 +13,7 @@ export const generateMetadata = () =>
   generateSeo({
     title: 'WolPortal',
     description:
-      'Explore the website of Wolmer a.k.a Karan Roy, a young web developer with a passion for gaming, VFX, and Film-making. Browse for Web3 projects and much more! Contact to discuss potential projects.',
+      'Explore the website of Wolmer a.k.a Karan Rao, a young web developer with a passion for gaming, VFX, and Film-making. Browse for Web3 projects and much more! Contact to discuss potential projects.',
     url: '/',
   });
 
@@ -41,8 +41,8 @@ function Home() {
               </div>
               <div className="inline-block text-wolgray">
                 <p className="whitespace-pre-line">
-                  Hi there, My e-name is Wolmer. I am a self-taught web developer based in India. I build complex web
-                  apps using frameworks like
+                  Hi there, My name is <span className="text-wolwhite/75">Karan Rao</span>. I am a self-taught web
+                  developer based in India. I build complex web apps using frameworks like
                   <span className="ml-1 nowrap">
                     <a
                       href="https://vuejs.org/?utm_source=wolmer.me"
