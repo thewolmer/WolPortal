@@ -4,9 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "turbo": "next dev --turbo",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "postbuild": "next-sitemap --config next-sitemap.config.js",
+    "start": "node server.js",
+    "commit": "git-cz",
+    "release": "commit-and-tag-version",
+    "push": "git push --follow-tags origin main",
+    "lint": "next lint",
+    "test": "npx tsx scripts/detectCircularDependencies.ts"
   },
   "dependencies": {
     "clsx": "^2.1.1",
