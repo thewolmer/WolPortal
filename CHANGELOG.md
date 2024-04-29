@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.3.1](https://github.com/thewolmer/WolPortal/branches/compare/v2.3.1..v2.3.0) (2024-04-29)
+
 ## [2.3.0](https://github.com/thewolmer/WolPortal/branches/compare/v2.3.0..v2.2.2) (2024-04-04)
 
 
