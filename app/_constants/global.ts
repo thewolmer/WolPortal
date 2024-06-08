@@ -10,3 +10,4 @@ export const opensea = 'thewolmer';
 export const spotify = '31fph23qi2hh55jwun56gn4hf2oe?si=AmyAYdjqQWmGu-XKhmeL3g';
 export const snapchat = 'thewolmer';
 export const clubhouse = 'thewolmer';
+export const email = 'contact@wolmer.me';

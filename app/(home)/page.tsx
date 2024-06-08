@@ -27,15 +27,15 @@ function Home() {
               <div className="text-xl font-extrabold md:text-3xl text-white/75">
                 <h1>Self taught</h1>
                 <h1 className="space-x-2">
-                  <a
+                  {/* <a
                     href="https://www.w3schools.com/whatis/whatis_frontenddev.asp?utm_source=wolmer.me"
                     target="_blank"
                     rel="noreferrer noopener"
                     className="border-b-1 cursor-help border-neutral-500 text-neutral-500"
                   >
                     Frontend
-                  </a>
-                  <span>web developer</span>
+                  </a> */}
+                  <span className="border-b-1 cursor-help border-neutral-500 text-neutral-500">web developer</span>
                   <br /> and a Web3 enthusiast
                 </h1>
               </div>
@@ -45,22 +45,22 @@ function Home() {
                   developer based in India. I build complex web apps using frameworks like
                   <span className="ml-1 nowrap">
                     <a
+                      href="https://nextjs.org/?utm_source=wolmer.me"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="mr-2 description-link linked-white"
+                    >
+                      Next.js
+                    </a>
+                  </span>
+                  <span className="nowrap">
+                    <a
                       href="https://vuejs.org/?utm_source=wolmer.me"
                       target="_blank"
                       rel="noreferrer noopener"
                       className="mr-2 description-link linked-white"
                     >
                       Vue.js
-                    </a>
-                  </span>
-                  <span className="nowrap">
-                    <a
-                      href="https://reactjs.org/?utm_source=wolmer.me"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      className="mr-2 description-link linked-white"
-                    >
-                      React.js
                     </a>
                   </span>
                   <span className="nowrap">

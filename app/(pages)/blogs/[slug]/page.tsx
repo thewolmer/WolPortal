@@ -50,6 +50,7 @@ export const generateStaticParams = async () => {
   }));
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const PostPage = (props: any) => {
   const { slug } = props.params;
   const post = getPostContent(slug);

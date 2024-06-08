@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
-import classNames from 'classnames';
 import { motion } from 'framer-motion';
 import React from 'react';
 
@@ -30,7 +29,7 @@ const nftProjects = [
     link: 'https://iaconlabs.com',
     logo: 'https://cdn.discordapp.com/attachments/933379220258820156/1119319966898991175/kiQumrQ3_400x400.jpg',
     start: 'Apr-2023',
-    end: 'Present',
+    end: 'May-2024',
   },
   // {
   //   name: 'Jacks Originals',
@@ -51,6 +50,29 @@ const nftProjects = [
   // },
 ];
 const webProjects = [
+  {
+    name: 'AI powered Tweet Emotion Analysis',
+    descrip: 'A web app to analyze the sentiment of tweets and Text.',
+    link: 'https://spill-the-tea-ai.vercel.app/',
+    start: '',
+    end: 'Jun-2024',
+
+  },
+  {
+    name: 'Iacon Labs Website',
+    descrip: 'Modern and minimalistic website for Iacon Labs community using the latest web technologies.',
+    link: 'https://iaconlabs.com/',
+    start: '',
+    end: 'Feb-2024',
+
+  },
+  {
+    name: 'Plexolyt E-commerce',
+    descrip: 'A fullstack e-commerce site along with dashboard.',
+    link: 'https://plexolyt.com/',
+    start: '',
+    end: 'May-2024',
+  },
   {
     name: 'Floor Price Discord bot',
     descrip: 'A discord bot to show floor price of NFT projects by changing nickname',
@@ -73,7 +95,7 @@ const ProjectsSection = () => (
       <div>
         <div>
           <div className="flex items-center justify-between gap-4">
-            <h3 className="px-4 text-lg font-bold uppercase text-neutral-700">Web-3 Projects</h3>
+            <h3 className="px-4 text-lg font-bold uppercase text-neutral-700">Web-3 Contribution</h3>
           </div>
         </div>
         <div className="grid gap-2 mt-4 space-y-2">
