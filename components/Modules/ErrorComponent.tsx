@@ -1,13 +1,18 @@
 import React from 'react';
-
-const ErrorComponent = () => (
-  <section className="flex justify-center h-[80vh]">
-    <div className="flex flex-col items-center justify-center space-y-5">
-      <i className="text-4xl text-red-500 bx animate-pulse bxs-error-circle"></i>
-      <p className="text-2xl text-center text-red-500">Something Went Wrong</p>
-      <p className="text-wolgray"> Opps, something broke! Please try again</p>
-    </div>
-  </section>
+import { MdError } from 'react-icons/md';
+const ErrorComponent = ({
+	content = 'Something Went Wrong',
+	description = 'Oops, something broke! Please try again',
+}: { content?: string; description?: string }) => (
+	<section className="flex h-[80vh] justify-center">
+		<div className="flex flex-col items-center justify-center space-y-5">
+			<MdError className="h-10 w-10 text-destructive" />
+			<div className="max-w-xl">
+				<p className="text-center font-mono text-destructive text-xl">{content}</p>
+				<p className="text-center text-muted-foreground"> {description}</p>
+			</div>
+		</div>
+	</section>
 );
 
 export default ErrorComponent;

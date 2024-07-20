@@ -11,7 +11,7 @@
 		"rules": {
 			"recommended": true,
 			"nursery": {
-				"useSortedClasses": "error"
+				"useSortedClasses": "warn"
 			}
 		}
 	},

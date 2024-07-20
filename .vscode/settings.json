@@ -12,12 +12,12 @@
 	},
 	"editor.linkedEditing": true,
 	"files.eol": "\n",
-	"cSpell.words": ["DISCORTIFY"],
+	"cSpell.words": ["", "thewolmer", "Wolmer"],
 	"emeraldwalk.runonsave": {
 		"commands": [
 			{
 				"match": "\\.(ts|tsx|js|jsx|html)$",
-				"cmd": "npx biome lint \"${file}\" --write --unsafe --skip-errors"
+				"cmd": "bunx biome lint \"${file}\" --write --unsafe"
 			}
 		]
 	}

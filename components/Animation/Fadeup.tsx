@@ -1,22 +1,22 @@
 'use client';
 import { motion } from 'framer-motion';
-import React, { ReactNode } from 'react';
+import React, { type ReactNode } from 'react';
 
-import { fadeInUp } from '@util/animations';
+import { fadeInUp } from '@/utils/animations';
 
 interface Props {
-  children: ReactNode;
+	children: ReactNode;
 }
 // Animates children
 
 const FadeUp = ({ children }: Props) => (
-  <section>
-    <div className="relative w-full overflow-hidden">
-      <motion.div variants={fadeInUp} initial="hidden" animate="visible">
-        {children}
-      </motion.div>
-    </div>
-  </section>
+	<section>
+		<div className="relative w-full overflow-hidden">
+			<motion.div variants={fadeInUp} initial="hidden" animate="visible">
+				{children}
+			</motion.div>
+		</div>
+	</section>
 );
 
 export default FadeUp;

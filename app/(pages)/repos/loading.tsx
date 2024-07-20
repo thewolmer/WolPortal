@@ -1,46 +1,50 @@
-import Header from '@module/Header';
+import Header from '@/components/Layout/Header';
+import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
+import { Skeleton } from '@/components/ui/skeleton';
+import { RiGitRepositoryFill } from 'react-icons/ri';
 
 export default function Loading() {
-  return (
-    <main className="container w-11/12 min-h-screen pb-8 mx-auto mb-10 space-y-14 sm:pb-10 sm:w-9/12 md:w-7/12">
-      <Header title="Repositories" description="My public posts on github" />
-      <div className="grid gap-4 md:grid-cols-2">
-        {[0, 1, 2, 3].map((repo) => (
-          <div key={repo}>
-            <div className="flex flex-col justify-between h-full p-4 transition-colors rounded-lg bg-default">
-              <div className="space-y-2">
-                <div className="flex justify-between space-x-2">
-                  <div className="items-center space-x-1 truncate ">
-                    <span className="px-10 py-2 rounded-full bg-neutral-800 animate-pulse"></span>
-                    <span className="px-10 py-2 rounded-full bg-neutral-800 animate-pulse"></span>
-                  </div>
-                </div>
-                <div className="px-12 py-2 bg-neutral-800 animate-pulse"></div>
-                <div className="px-12 py-2 bg-neutral-800 animate-pulse"></div>
-                <div className="px-12 py-2 bg-neutral-800 animate-pulse"></div>
-              </div>
-              <div className="mt-4">
-                <div className="flex items-center justify-between">
-                  <span className="px-4 py-2 rounded-full animate-pulse"></span>{' '}
-                  <span className="px-2 py-2 rounded-full animate-pulse"> </span>
-                </div>
-                <div className="mt-4">
-                  <div className="flex items-center justify-between">
-                    <span className="px-4 py-2 rounded-full animate-pulse"></span>{' '}
-                    <span className="px-2 py-2 rounded-full animate-pulse"> </span>
-                  </div>
-                </div>
-                <div className="mt-4">
-                  <div className="flex items-center justify-between">
-                    <span className="px-4 py-2 rounded-full animate-pulse"></span>
-                    <span className="px-2 py-2 rounded-full animate-pulse"> </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </main>
-  );
+	return (
+		<main className="container ">
+			<Header title="Repositories" description="My public posts on github" />
+			<div className="grid w-full items-center justify-center gap-4 md:grid-cols-2">
+				{[0, 1, 2, 3].map((repo) => (
+					<Card key={repo} className="flex h-full w-full flex-col justify-between">
+						<div className="w-full">
+							<CardHeader className="w-full">
+								<div className="flex w-full items-center space-x-2">
+									<RiGitRepositoryFill size={22} className="text-secondary" />
+
+									<Skeleton className="h-3 w-[40%]" />
+								</div>
+							</CardHeader>
+
+							<CardContent className="w-full">
+								<div className="w-full space-y-2">
+									<Skeleton className="h-3 w-[80%]" />
+									<Skeleton className="h-3 w-[85%]" />
+									<Skeleton className="h-3 w-[75%]" />
+									<Skeleton className="h-3 w-[80%]" />
+								</div>
+							</CardContent>
+						</div>
+						<CardFooter className="justify flex w-full flex-col items-start text-muted-foreground">
+							<div className="flex w-full items-center justify-between">
+								<span>Language:</span>
+								<span>
+									<Skeleton className="h-3 w-10" />
+								</span>
+							</div>
+							<div className="flex w-full items-center justify-between">
+								<span>License:</span>
+								<span>
+									<Skeleton className="h-3 w-10" />
+								</span>
+							</div>
+						</CardFooter>
+					</Card>
+				))}
+			</div>
+		</main>
+	);
 }

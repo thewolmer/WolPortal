@@ -1,49 +1,49 @@
-import { getTopArtists } from '@api/spotify';
-import { Image } from '@element/Image';
-import { Link } from '@element/Link';
-import ErrorComponent from '@module/ErrorComponent';
+import { Image } from '@/components/image';
+import { Link } from '@/components/link';
+import ErrorComponent from '@/components/modules/ErrorComponent';
+import { getTopArtists } from '@/lib/spotify';
 
-import { Artists } from '@type/Artists';
+import type { Artists } from '@/types/Artists';
 
 const TopArtists = async () => {
-  const response = await getTopArtists();
+	const response = await getTopArtists();
 
-  if (response === null) {
-    return <ErrorComponent />;
-  }
+	if (response === null) {
+		return <ErrorComponent />;
+	}
 
-  return (
-    <>
-      {response ? (
-        <section className="flex flex-col">
-          <h1 className="py-5 text-3xl font-bold text-center text-wolgray">TOP PLAYED ARTISTS</h1>
-          <div className="grid grid-cols-2 gap-8 md:grid-cols-3 xl:grid-cols-4">
-            {response.map((item: Artists) => (
-              <Link href={item.external_urls.spotify} key={item.id} rel="noreferrer noopener">
-                <div className="flex flex-col items-center h-full p-2 transition-colors bg-default hover:bg-active rounded-2xl">
-                  <div className="mt-auto">
-                    <Image
-                      src={item.images[2].url}
-                      height={100}
-                      width={100}
-                      alt={item.name}
-                      className="mx-auto mb-4 rounded-2xl opacity-90 w-[70px] h-[70px] ring-neutral-600"
-                    />
-                  </div>
-                  <div className="flex flex-col justify-end flex-grow">
-                    <h1 className="mb-1 font-bold tracking-tight text-center text-md text-wolgray">{item.name}</h1>
-                    <p className="text-sm text-center capitalize  text-wolgray">{item.genres[0]}</p>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-      ) : (
-        <> </>
-      )}
-    </>
-  );
+	return (
+		<>
+			{response ? (
+				<section className="flex flex-col">
+					<h1 className="py-5 text-center font-bold text-3xl text-wolgray">TOP PLAYED ARTISTS</h1>
+					<div className="grid grid-cols-2 gap-8 md:grid-cols-3 xl:grid-cols-4">
+						{response.map((item: Artists) => (
+							<Link href={item.external_urls.spotify} key={item.id} rel="noreferrer noopener">
+								<div className="flex h-full flex-col items-center rounded-2xl bg-default p-2 transition-colors hover:bg-active">
+									<div className="mt-auto">
+										<Image
+											src={item.images[2].url}
+											height={100}
+											width={100}
+											alt={item.name}
+											className="mx-auto mb-4 h-[70px] w-[70px] rounded-2xl opacity-90 ring-neutral-600"
+										/>
+									</div>
+									<div className="flex flex-grow flex-col justify-end">
+										<h1 className="mb-1 text-center font-bold text-md text-wolgray tracking-tight">{item.name}</h1>
+										<p className="text-center text-sm text-wolgray capitalize">{item.genres[0]}</p>
+									</div>
+								</div>
+							</Link>
+						))}
+					</div>
+				</section>
+			) : (
+				<> </>
+			)}
+		</>
+	);
 };
 
 export default TopArtists;
