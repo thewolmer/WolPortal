@@ -15,9 +15,9 @@ export default function Loading() {
 			<section className="flex min-h-screen flex-col gap-5">
 				<ChartSkeleton />
 
-				<section className="flex w-full flex-row justify-between gap-5">
+				<section className='flex w-full flex-col justify-between gap-5 md:flex-row'>
 					<ReadmeSkeleton />
-					<div className="flex w-2/6 flex-col gap-5">
+					<div className='flex w-full flex-col gap-5 md:w-2/6'>
 						<Card>
 							<CardHeader>
 								<CardTitle className="font-mono text-lg">

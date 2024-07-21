@@ -39,7 +39,7 @@ export const ContributorsSkeleton = () => {
 export const ReadmeSkeleton = () => {
 	const skeletons = Array.from({ length: 20 }, () => Math.floor(Math.random() * 41) + 60);
 	return (
-		<div className="flex w-4/6 flex-col gap-5">
+		<div className='flex w-full flex-col gap-5 md:w-4/6'>
 			<h2 className="font-bold font-mono text-primary text-xl">README.md</h2>
 			<article className="mx-auto w-full space-y-2">
 				<Skeleton className="h-8 w-full" />
