@@ -1,3 +1,5 @@
+import type { ImageObject } from '../tmdb/images';
+
 export * from './stats';
 interface BaseItem {
 	id: number;
@@ -21,7 +23,7 @@ interface ShowItem extends BaseItem {
 	};
 }
 
-interface MovieItem extends BaseItem {
+export interface MovieItem extends BaseItem {
 	movie: {
 		title: string;
 		year: number;
@@ -32,6 +34,19 @@ interface MovieItem extends BaseItem {
 type Item = ShowItem | MovieItem;
 
 export type WatchlistItem = Item & {
+	rank: number;
+	listed_at: string;
+	notes: string | null;
+	image?: ImageObject;
+};
+
+export type WatchlistMovieItem = MovieItem & {
+	rank: number;
+	listed_at: string;
+	notes: string | null;
+};
+
+export type WatchlistShowItem = ShowItem & {
 	rank: number;
 	listed_at: string;
 	notes: string | null;
@@ -50,6 +65,14 @@ export type RecentShowsItem = Omit<ShowItem, 'type' | 'id'> & {
 };
 
 export type RatingsItem = Omit<Item, 'id'> & {
+	rated_at: string;
+	rating: number;
+};
+export type RatingsShowItem = Omit<ShowItem, 'id'> & {
+	rated_at: string;
+	rating: number;
+};
+export type RatingsMovieItem = Omit<MovieItem, 'id'> & {
 	rated_at: string;
 	rating: number;
 };

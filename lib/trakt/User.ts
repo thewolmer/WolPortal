@@ -56,14 +56,14 @@ export const getRecentShows = async (): Promise<RecentShowsItem[] | undefined> =
 };
 
 interface WatchlistProps extends paginationProps {
-	type: 'movies' | 'shows' | 'seasons ' | 'episodes';
+	type?: 'movies' | 'shows' | 'seasons ' | 'episodes' | 'all';
 	sort?: 'added' | 'rank' | 'title' | 'released' | 'runtime' | 'popularity' | 'percentage' | 'votes';
 }
 
 export const getWatchList = async ({
 	page = 1,
 	limit = 10,
-	type,
+	type = 'all',
 	sort = 'added',
 }: WatchlistProps): Promise<WatchlistItem[] | undefined> => {
 	try {
@@ -83,14 +83,14 @@ export const getWatchList = async ({
 };
 
 interface RatingsProps extends paginationProps {
-	type: 'movies' | 'shows' | 'seasons ' | 'episodes' | 'all';
-	rating: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
+	type?: 'movies' | 'shows' | 'seasons ' | 'episodes' | 'all';
+	rating: string;
 }
 
 export const getRatings = async ({
 	page = 1,
 	limit = 10,
-	type,
+	type = 'all',
 	rating,
 }: RatingsProps): Promise<RatingsItem[] | undefined> => {
 	try {

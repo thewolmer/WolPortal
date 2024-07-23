@@ -1,23 +1,31 @@
 'use client';
 
+import { StarIcon } from '@/components/icons/star';
 import { Image } from '@/components/image';
 import { Tooltip } from '@/components/tooltip';
 import { getImages } from '@/lib/tmdb/Images';
-import type { RecentMoviesItem } from '@/types/trakt';
+import type { RatingsMovieItem, RecentMoviesItem, WatchlistMovieItem } from '@/types/trakt';
 import { formatDate, formatDistanceStrict } from 'date-fns';
 import React from 'react';
 import useSWR from 'swr';
 
-export const MovieCard = ({ movie }: { movie: RecentMoviesItem }) => {
+export const MovieCard = ({ movie }: { movie: RecentMoviesItem | WatchlistMovieItem | RatingsMovieItem }) => {
 	const swrKey = [`${movie.movie.ids.tmdb}`, 'movie', 'en', 'backdrops', 'w780'];
 
-	const { data: image, error } = useSWR(swrKey, () =>
-		getImages(movie.movie.ids.tmdb, {
-			type: 'movie',
-			language: 'en',
-			image_type: 'backdrops',
-			size: 'w780',
-		}),
+	const { data: image, error } = useSWR(
+		swrKey,
+		() =>
+			getImages(movie.movie.ids.tmdb, {
+				type: 'movie',
+				language: 'en',
+				image_type: 'backdrops',
+				size: 'w780',
+			}),
+		{
+			revalidateIfStale: false,
+			revalidateOnFocus: false,
+			refreshWhenHidden: false,
+		},
 	);
 
 	if (error) {
@@ -46,9 +54,26 @@ export const MovieCard = ({ movie }: { movie: RecentMoviesItem }) => {
 				</div>
 			</div>
 			<div className="absolute top-1 right-2 z-20 rounded-lg bg-black/30 px-2 py-1 font-semibold text-white/80 text-xs backdrop-blur-md">
-				<Tooltip content={formatDate(movie.watched_at, 'PP')} className="text-sm">
-					<span className="capitalize">{formatDistanceStrict(movie.watched_at, new Date(), { addSuffix: true })}</span>
-				</Tooltip>
+				{(movie as RecentMoviesItem).watched_at && (
+					<Tooltip content={`Watched: ${formatDate((movie as RecentMoviesItem).watched_at, 'PP')}`} className="text-sm">
+						<span className="capitalize">
+							{formatDistanceStrict((movie as RecentMoviesItem).watched_at, new Date(), { addSuffix: true })}
+						</span>
+					</Tooltip>
+				)}
+				{(movie as WatchlistMovieItem).listed_at && (
+					<Tooltip content={`Added: ${formatDate((movie as WatchlistMovieItem).listed_at, 'PP')}`} className="text-sm">
+						<span className="capitalize">Movie</span>
+					</Tooltip>
+				)}
+				{(movie as RatingsMovieItem).rated_at && (
+					<Tooltip content={`Rated: ${formatDate((movie as RatingsMovieItem).rated_at, 'PP')}`} className="text-sm">
+						<span className="flex gap-1">
+							{(movie as RatingsMovieItem).rating}
+							<StarIcon className="text-yellow-400" width={16} height={16} fill="#facc15" />
+						</span>
+					</Tooltip>
+				)}
 			</div>
 		</div>
 	);

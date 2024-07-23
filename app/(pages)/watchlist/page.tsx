@@ -1,9 +1,11 @@
 import Header from '@/components/Layout/Header';
-import AnimatedNumber from '@/components/ui/stats-number-animation';
+
 import React from 'react';
 import { RecentMoviesComponent } from './components/RecentMoviesComponent';
 import { RecentShowsComponent } from './components/RecentShowsComponent';
 import { Stats } from './components/Stats';
+import { TopRatedComponent } from './components/TopRatedComponents';
+import { WatchlistComponent } from './components/WatchListComponent';
 
 const page = async () => {
 	return (
@@ -13,6 +15,8 @@ const page = async () => {
 				<RecentMoviesComponent />
 				<RecentShowsComponent />
 				<Stats />
+				<WatchlistComponent />
+				<TopRatedComponent />
 			</section>
 		</>
 	);

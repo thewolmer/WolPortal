@@ -12,27 +12,31 @@ export const Stats = async () => {
 		return <div>Failed to load stats</div>;
 	}
 	return (
-		<Card>
-			<CardHeader className="flex flex-row justify-between">
-				<div className="flex items-center justify-center gap-2">
-					<PopcornIcon width={50} height={50} className="text-2xl text-pink-500" />
-					<div className="flex flex-col">
-						<span>Movie Watchtime</span>
-						<span className="text-muted-foreground text-sm">{formatMinutes(stats?.movies.minutes)}</span>
-						<span className="text-muted-foreground text-sm">Total {stats.movies.watched} Movies</span>
+		<div className="flex w-full justify-between gap-5">
+			<Card className="w-full">
+				<CardHeader>
+					<div className="flex items-center justify-center gap-2">
+						<PopcornIcon width={50} height={50} className="text-2xl text-pink-500" />
+						<div className="flex flex-col">
+							<span className="font-semibold text-accent-foreground tracking-wider">Movies Watchtime</span>
+							<span className="font-mono text-muted-foreground text-xs">{formatMinutes(stats?.movies.minutes)}</span>
+							<span className="font-mono text-muted-foreground text-xs">Total {stats.movies.watched}* Movies</span>
+						</div>
 					</div>
-				</div>
-				<div className="flex items-center justify-center gap-2">
-					<Tv02Icon width={50} height={50} className="text-2xl text-green-500" />
-					<div className="flex flex-col">
-						<span>Shows Watchtime</span>
-						<span className="text-muted-foreground text-sm">{formatMinutes(stats?.episodes.minutes)}</span>
-						<span className="text-muted-foreground text-sm">Total {stats.shows.watched} Movies</span>
+				</CardHeader>
+			</Card>
+			<Card className="w-full">
+				<CardHeader>
+					<div className="flex flex-row-reverse items-center justify-center gap-2">
+						<Tv02Icon width={50} height={50} className="text-2xl text-green-500" />
+						<div className="flex flex-col">
+							<span className="font-semibold text-accent-foreground tracking-wider">Shows Watchtime</span>
+							<span className="font-mono text-muted-foreground text-xs">{formatMinutes(stats?.episodes.minutes)}</span>
+							<span className="font-mono text-muted-foreground text-xs">Total {stats.shows.watched}* Shows</span>
+						</div>
 					</div>
-				</div>
-				<div />
-				<div />
-			</CardHeader>
-		</Card>
+				</CardHeader>
+			</Card>
+		</div>
 	);
 };

@@ -14,9 +14,9 @@ export const Image: FC<Props> = ({ src, fallbackSrc, className, ...rest }: Props
 		setImgFail(false);
 		setOldSrc(src);
 	}
-	if (!fallbackSrc && imgFail) {
-		return <NextImage {...rest} src={defaultFallbackImage} />;
-	}
+	// if (!fallbackSrc && imgFail) {
+	// 	return <NextImage {...rest} src={defaultFallbackImage} />;
+	// }
 	return (
 		<NextImage
 			{...rest}

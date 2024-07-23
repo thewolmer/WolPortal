@@ -5,7 +5,7 @@ import { getRecentMovies } from '@/lib/trakt/User';
 import { MovieCard } from './MovieCard';
 
 export const RecentMoviesComponent = async () => {
-	const movies = await getRecentMovies({ limit: 30 });
+	const movies = await getRecentMovies({ limit: 15 });
 	if (!movies) {
 		return <div>Failed to load movies</div>;
 	}

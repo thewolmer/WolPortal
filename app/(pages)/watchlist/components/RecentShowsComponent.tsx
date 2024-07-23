@@ -6,15 +6,13 @@ import { getRecentShows } from '@/lib/trakt/User';
 import { ShowCard } from './ShowCard';
 
 export const RecentShowsComponent = async () => {
-	const res = await getRecentShows();
-	if (!res) {
+	const shows = await getRecentShows();
+	if (!shows) {
 		return <div>Failed to load movies</div>;
 	}
-
-	const shows = res.slice(0, 30);
 	return (
 		<div>
-			<h3 className='px-4 font-bold font-mono text-lg text-primary'>Recently Watched TV Shows</h3>
+			<h3 className="px-4 font-bold font-mono text-lg text-primary">Recently Watched TV Shows</h3>
 			<Carousel className="w-full ">
 				<CarouselContent className="-ml-1 w-full">
 					{shows.map((show) => {
