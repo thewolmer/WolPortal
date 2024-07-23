@@ -5,7 +5,7 @@ import React from 'react';
 import { Image } from '@/components/Image';
 import { Link } from '@/components/Link';
 import { repository } from '@/constants/global';
-import { ThemeToggle } from '../modules/ThemeToggle';
+import { ThemeToggle } from '../Modules/ThemeToggle';
 
 const Footer = () => {
 	const pathname = usePathname();
