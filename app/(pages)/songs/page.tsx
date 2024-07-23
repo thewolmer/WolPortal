@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Header from '@/components/Layout/Header';
-import ErrorComponent from '@/components/modules/ErrorComponent';
+import ErrorComponent from '@/components/Modules/ErrorComponent';
 import { getTopTracks } from '@/lib/spotify';
 import { generateSeo } from '@/utils/generateSeo';
 

@@ -1,6 +1,6 @@
 import { Image } from '@/components/Image';
 import { Link } from '@/components/Link';
-import ErrorComponent from '@/components/modules/ErrorComponent';
+import ErrorComponent from '@/components/Modules/ErrorComponent';
 import { getTopArtists } from '@/lib/spotify';
 
 import type { Artists } from '@/types/Artists';

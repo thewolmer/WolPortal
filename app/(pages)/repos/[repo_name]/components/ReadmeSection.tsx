@@ -1,4 +1,4 @@
-import ErrorComponent from '@/components/modules/ErrorComponent';
+import ErrorComponent from '@/components/Modules/ErrorComponent';
 import { getRepoReadMe } from '@/lib/github/Repos';
 import React from 'react';
 

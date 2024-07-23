@@ -1,6 +1,6 @@
 import Header from '@/components/Layout/Header';
 import { Link } from '@/components/Link';
-import ErrorComponent from '@/components/modules/ErrorComponent';
+import ErrorComponent from '@/components/Modules/ErrorComponent';
 import { Tooltip } from '@/components/tooltip';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
