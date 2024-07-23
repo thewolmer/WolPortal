@@ -1,7 +1,7 @@
 'use client';
 
+import { Image } from '@/components/Image';
 import { StarIcon } from '@/components/icons/star';
-import { Image } from '@/components/image';
 import { Tooltip } from '@/components/tooltip';
 import { getImages } from '@/lib/tmdb/Images';
 import type { RatingsMovieItem, RecentMoviesItem, WatchlistMovieItem } from '@/types/trakt';

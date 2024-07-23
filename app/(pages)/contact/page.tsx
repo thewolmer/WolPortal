@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Header from '@/components/Layout/Header';
-import { Link } from '@/components/link';
+import { Link } from '@/components/Link';
 import { ContentGrid } from '@/components/modules/ContentGrid';
 import { github, instagram, linkedin, opensea, snapchat, spotify, twitter } from '@/constants/global';
 import { generateSeo } from '@/utils/generateSeo';

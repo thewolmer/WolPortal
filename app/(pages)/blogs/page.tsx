@@ -1,4 +1,4 @@
-import Reveal from '@/components/animation/Reveal';
+import Reveal from '@/components/Animation/Reveal';
 import { generateSeo } from '@/utils/generateSeo';
 import getPostMetadata from '@/utils/getPostMetadata';
 

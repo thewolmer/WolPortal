@@ -1,9 +1,9 @@
-import { Link } from '@/components/link';
+import { Link } from '@/components/Link';
 
-import Reveal from '@/components/animation/Reveal';
+import Reveal from '@/components/Animation/Reveal';
 import { generateSeo } from '@/utils/generateSeo';
 
-import { Image } from '@/components/image';
+import { Image } from '@/components/Image';
 import LinkTab from './components/LinkTab';
 import { MeSection } from './components/MeSection';
 import ProjectsSection from './components/ProjectsSection';

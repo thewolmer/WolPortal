@@ -1,5 +1,5 @@
-import { Image } from '@/components/image';
-import { Link } from '@/components/link';
+import { Image } from '@/components/Image';
+import { Link } from '@/components/Link';
 import ErrorComponent from '@/components/modules/ErrorComponent';
 import { getTopArtists } from '@/lib/spotify';
 

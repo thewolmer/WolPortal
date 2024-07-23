@@ -1,4 +1,4 @@
-import { Link } from '@/components/link';
+import { Link } from '@/components/Link';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 
 const Links = [
@@ -32,7 +32,7 @@ export const MeSection = () => {
 				{Links.map((link) => (
 					<Card key={link.label}>
 						<Link href={link.href}>
-							<CardHeader className='font-extrabold text-primary text-xl'> {link.label}</CardHeader>
+							<CardHeader className="font-extrabold text-primary text-xl"> {link.label}</CardHeader>
 							<CardContent className="font-mono text-muted-foreground tracking-tight">
 								<p>{link.description}</p>
 							</CardContent>

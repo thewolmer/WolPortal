@@ -3,8 +3,8 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 
-import Reveal from '@/components/animation/Reveal';
-import { Link } from '@/components/link';
+import Reveal from '@/components/Animation/Reveal';
+import { Link } from '@/components/Link';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { fadeInUp } from '@/utils/animations';
 

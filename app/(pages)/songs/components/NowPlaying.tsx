@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 
-import { Image } from '@/components/image';
+import { Image } from '@/components/Image';
 import { getNowPlaying } from '@/lib/spotify/getNowPlaying';
 
 import type { Spotify } from '@/types/Lanyard';

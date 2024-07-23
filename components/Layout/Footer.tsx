@@ -2,8 +2,8 @@
 import { usePathname } from 'next/navigation';
 import React from 'react';
 
-import { Image } from '@/components/image';
-import { Link } from '@/components/link';
+import { Image } from '@/components/Image';
+import { Link } from '@/components/Link';
 import { repository } from '@/constants/global';
 import { ThemeToggle } from '../modules/ThemeToggle';
 

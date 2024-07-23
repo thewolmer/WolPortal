@@ -1,5 +1,5 @@
 import Header from '@/components/Layout/Header';
-import { Link } from '@/components/link';
+import { Link } from '@/components/Link';
 import ErrorComponent from '@/components/modules/ErrorComponent';
 import { Tooltip } from '@/components/tooltip';
 import { Badge } from '@/components/ui/badge';

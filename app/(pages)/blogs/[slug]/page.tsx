@@ -5,8 +5,8 @@ import Markdown from 'markdown-to-jsx';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next/types';
 
-import Reveal from '@/components/animation/Reveal';
-import { Image } from '@/components/image';
+import Reveal from '@/components/Animation/Reveal';
+import { Image } from '@/components/Image';
 import { generateSeo } from '@/utils/generateSeo';
 import getPostMetadata from '@/utils/getPostMetadata';
 import { options } from '@/utils/markdownOptions';

@@ -1,5 +1,5 @@
-import { Image } from '@/components/image';
-import { Link } from '@/components/link';
+import { Image } from '@/components/Image';
+import { Link } from '@/components/Link';
 import { Tooltip } from '@/components/tooltip';
 import { getRepoContributors } from '@/lib/github/Repos';
 import React from 'react';

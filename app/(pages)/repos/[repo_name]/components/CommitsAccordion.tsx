@@ -1,4 +1,4 @@
-import { Link } from '@/components/link';
+import { Link } from '@/components/Link';
 import { Tooltip } from '@/components/tooltip';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Card } from '@/components/ui/card';

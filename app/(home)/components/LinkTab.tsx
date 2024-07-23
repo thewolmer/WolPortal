@@ -3,7 +3,7 @@ import { MdAlternateEmail } from 'react-icons/md';
 import { RiTwitterXFill } from 'react-icons/ri';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
 
-import { Link } from '@/components/link';
+import { Link } from '@/components/Link';
 import { email, github, linkedin, twitter } from '@/constants/global';
 
 const Links = [
@@ -31,7 +31,7 @@ const Links = [
 
 const LinkTab = () => (
 	<div className="mr-8 flex items-center space-x-2 rounded-md py-5">
-		<div className='mx-auto flex w-full flex-wrap items-center justify-between text-4xl'>
+		<div className="mx-auto flex w-full flex-wrap items-center justify-between text-4xl">
 			{Links.map((link, index) => (
 				// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 				<Link key={index} href={link.link}>
