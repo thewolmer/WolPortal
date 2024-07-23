@@ -68,7 +68,7 @@ const PostPage = (props: any) => {
 				<div className="flex flex-row items-center justify-center space-x-4">
 					<div className="mt-4 text-neutral-500">
 						<span className="mx-2 justify-center text-center align-middle">
-							<i className="bx bxs-calendar text-2xl" />
+							{/* <i className="bx bxs-calendar text-2xl" /> */}
 						</span>
 						{post.data.date}
 					</div>

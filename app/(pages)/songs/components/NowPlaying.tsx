@@ -29,7 +29,7 @@ const NowPlaying = () => {
 					Currently Not Listening on Spotify
 				</h2>
 				<div className="absolute right-0 bottom-0 z-0 flex items-center align-middle opacity-20">
-					<i className="bx bxl-spotify align-middle text-7xl" />
+					{/* <i className="bx bxl-spotify align-middle text-7xl" /> */}
 				</div>
 			</div>
 		);
@@ -59,7 +59,7 @@ const NowPlaying = () => {
 						/>
 					</div>
 					<div className="absolute right-0 bottom-0 z-0 flex animate-pulse items-center align-middle">
-						<i className="bx bxl-spotify align-middle text-4xl text-[#737366]/20 md:text-7xl" />
+						{/* <i className="bx bxl-spotify align-middle text-4xl text-[#737366]/20 md:text-7xl" /> */}
 					</div>
 				</div>
 			) : (

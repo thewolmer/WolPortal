@@ -1,11 +1,9 @@
 import { Link } from '@/components/link';
 
 import Reveal from '@/components/animation/Reveal';
-import { ContentGrid } from '@/components/modules/ContentGrid';
 import { generateSeo } from '@/utils/generateSeo';
 
 import { Image } from '@/components/image';
-import Lanyard from './components/Lanyard';
 import LinkTab from './components/LinkTab';
 import { MeSection } from './components/MeSection';
 import ProjectsSection from './components/ProjectsSection';
