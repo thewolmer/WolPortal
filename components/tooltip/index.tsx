@@ -7,11 +7,18 @@ interface TooltipProps extends React.ComponentProps<typeof TooltipContent> {
 	children: React.ReactNode;
 	delayDuration?: number;
 }
-export const Tooltip = ({ content, side = 'top', delayDuration = 200, children, className }: TooltipProps) => (
+export const Tooltip = ({
+	content,
+	side = 'top',
+	delayDuration = 200,
+	children,
+	className,
+	...props
+}: TooltipProps) => (
 	<TooltipProvider>
 		<UiToolKit delayDuration={delayDuration}>
 			<TooltipTrigger asChild>{children}</TooltipTrigger>
-			<TooltipContent align="center" sideOffset={3} side={side} className={clsx('bg-accent', className)}>
+			<TooltipContent align="center" sideOffset={3} side={side} className={clsx('bg-accent', className)} {...props}>
 				{content}
 			</TooltipContent>
 		</UiToolKit>

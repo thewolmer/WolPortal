@@ -14,7 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			<body className={classNames(inter.className, geistmono.variable)}>
 				<Providers attribute="class" defaultTheme="system">
 					<Navbar />
-					<main className="container mx-auto max-w-4xl p-10 md:p-0">{children}</main>
+					<main className='container mx-auto min-h-screen max-w-4xl p-10 md:p-0'>{children}</main>
 					<Footer />
 				</Providers>
 			</body>

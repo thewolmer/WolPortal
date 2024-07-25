@@ -8,9 +8,19 @@ const headers = {
 	'Access-Control-Allow-Headers': 'Content-Type',
 };
 
-export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
-	const type = request.nextUrl.searchParams.get('type');
-	const id = params.id;
+export async function GET(request: NextRequest, { params }: { params: { type: string } }) {
+	const id = request.nextUrl.searchParams.get('id');
+	const type = params.type;
+
+	if (!id || (type !== 'movie' && type !== 'tv')) {
+		return NextResponse.json(
+			{ error: 'Invalid Request' },
+			{
+				status: 400,
+				headers,
+			},
+		);
+	}
 
 	try {
 		const response = await fetch(

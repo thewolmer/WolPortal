@@ -3,10 +3,10 @@ import React from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { getRecentShows } from '@/lib/trakt/User';
 
-import { ShowCard } from './ShowCard';
+import { ShowCard } from './cards/ShowCard';
 
 export const RecentShowsComponent = async () => {
-	const shows = await getRecentShows();
+	const shows = await getRecentShows({});
 	if (!shows) {
 		return <div>Failed to load movies</div>;
 	}

@@ -1,9 +1,10 @@
 import Header from '@/components/Layout/Header';
 
 import React from 'react';
+
+import { Stats } from './components/Cards/Stats';
 import { RecentMoviesComponent } from './components/RecentMoviesComponent';
 import { RecentShowsComponent } from './components/RecentShowsComponent';
-import { Stats } from './components/Stats';
 import { TopRatedComponent } from './components/TopRatedComponents';
 import { WatchlistComponent } from './components/WatchListComponent';
 
@@ -15,6 +16,7 @@ const page = async () => {
 				<RecentMoviesComponent />
 				<RecentShowsComponent />
 				<Stats />
+
 				<WatchlistComponent />
 				<TopRatedComponent />
 			</section>

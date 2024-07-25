@@ -4,8 +4,8 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { getRatings } from '@/lib/trakt/User';
 
 import type { RatingsMovieItem, RatingsShowItem } from '@/types/trakt';
-import { MovieCard } from './MovieCard';
-import { ShowCard } from './ShowCard';
+import { MovieCard } from './cards/MovieCard';
+import { ShowCard } from './cards/ShowCard';
 
 export const TopRatedComponent = async () => {
 	const res = await getRatings({ rating: '10,9' });

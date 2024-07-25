@@ -1,5 +1,5 @@
 import type { ImageObject } from '@/types/tmdb/images';
-import { TmdbGet } from './helper';
+import { TmdbImageGet } from './helper';
 
 type BackdropSizes = 'w300' | 'w780' | 'w1280' | 'original';
 type LogoSizes = 'w45' | 'w92' | 'w154' | 'w185' | 'w300' | 'w500' | 'original';
@@ -30,10 +30,10 @@ type ImagesProps = BackdropImagesProps | LogoImagesProps | PosterImagesProps;
 
 export const getImages = async (id: number, { type, image_type, language, size }: ImagesProps) => {
 	try {
-		const res = await TmdbGet(`/${id}`, {
+		const res = await TmdbImageGet(`/${type}`, {
 			revalidate: 3600,
 			searchParams: {
-				type,
+				id,
 			},
 		});
 		if (!res.ok) return;
