@@ -5,7 +5,12 @@ const Links = [
 	{
 		label: 'Repositories',
 		href: '/repos',
-		description: 'Browse the list of my projects and open source github code here.',
+		description: ' Check out my repositories and projects i have been working on.',
+	},
+	{
+		label: 'Blogs',
+		href: '/blogs',
+		description: 'Read my blogs on various topics and technologies.',
 	},
 	{
 		label: 'Songs',
@@ -13,14 +18,9 @@ const Links = [
 		description: 'Music connects people. Check out my recently played songs.',
 	},
 	{
-		label: 'Blogs',
-		href: '/blogs',
-		description: 'Stories about my life, development, my experiences, and much more!',
-	},
-	{
-		label: 'Contact',
-		href: '/contact',
-		description: 'Need help with anything? Want to get in touch? Send me a message!',
+		label: 'Watchlist',
+		href: '/watchlist',
+		description: 'Movies and TV shows I have watched and recommend to you.',
 	},
 ];
 

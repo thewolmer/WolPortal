@@ -55,7 +55,7 @@ export const MovieCard = ({ movie }: { movie: RecentMoviesItem | WatchlistMovieI
 		<div
 			onClick={handleClick}
 			key={movie.movie.ids.trakt}
-			className="group hover:-rotate-1 relative w-full rounded-lg shadow-2xl transition-all duration-300 ease-in-out"
+			className='group hover:-rotate-1 relative w-full cursor-pointer rounded-lg shadow-2xl transition-all duration-300 ease-in-out'
 		>
 			<Image
 				src={isLoading ? '/images/fallback/fallback1.jpg' : (image?.src as string)}

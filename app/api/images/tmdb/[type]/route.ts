@@ -2,12 +2,6 @@ import { type NextRequest, NextResponse } from 'next/server';
 
 export const revalidate = 1;
 
-const headers = {
-	'Access-Control-Allow-Origin': '*',
-	'Access-Control-Allow-Methods': 'GET',
-	'Access-Control-Allow-Headers': 'Content-Type',
-};
-
 export async function GET(request: NextRequest, { params }: { params: { type: string } }) {
 	const id = request.nextUrl.searchParams.get('id');
 	const type = params.type;
@@ -17,7 +11,6 @@ export async function GET(request: NextRequest, { params }: { params: { type: st
 			{ error: 'Invalid Request' },
 			{
 				status: 400,
-				headers,
 			},
 		);
 	}
@@ -30,7 +23,6 @@ export async function GET(request: NextRequest, { params }: { params: { type: st
 
 		const data = await response.json();
 		return NextResponse.json(data, {
-			headers,
 			status: 200,
 		});
 	} catch (error) {
@@ -38,7 +30,6 @@ export async function GET(request: NextRequest, { params }: { params: { type: st
 			{ error: error },
 			{
 				status: 500,
-				headers,
 			},
 		);
 	}

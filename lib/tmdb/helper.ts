@@ -1,6 +1,7 @@
 const headers = {
 	'Content-Type': 'application/json',
 	'Allow-Cross-Origin': '*',
+	'X-Api-Identifier': process.env.NEXT_PUBLIC_API_IDENTIFIER as string,
 };
 
 interface Props {

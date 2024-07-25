@@ -12,11 +12,10 @@ const page = async () => {
 	return (
 		<>
 			<Header title="Movies and Shows" description="Track of my watched movies, TV shows and Watchlist" />
-			<section className="flex min-h-screen flex-col gap-16">
+			<section className="no-select flex min-h-screen flex-col gap-16">
 				<RecentMoviesComponent />
 				<RecentShowsComponent />
 				<Stats />
-
 				<WatchlistComponent />
 				<TopRatedComponent />
 			</section>
