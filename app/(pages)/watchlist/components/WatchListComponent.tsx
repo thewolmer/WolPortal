@@ -2,8 +2,8 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { getWatchList } from '@/lib/trakt/User';
 
 import type { WatchlistMovieItem, WatchlistShowItem } from '@/types/trakt';
-import { MovieCard } from './cards/MovieCard';
-import { ShowCard } from './cards/ShowCard';
+import { MovieCard } from './Cards/MovieCard';
+import { ShowCard } from './Cards/ShowCard';
 
 export const WatchlistComponent = async () => {
 	const res = await getWatchList({ limit: 15 });

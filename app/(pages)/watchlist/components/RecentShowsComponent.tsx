@@ -3,7 +3,7 @@ import React from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { getRecentShows } from '@/lib/trakt/User';
 
-import { ShowCard } from './cards/ShowCard';
+import { ShowCard } from './Cards/ShowCard';
 
 export const RecentShowsComponent = async () => {
 	const shows = await getRecentShows({});

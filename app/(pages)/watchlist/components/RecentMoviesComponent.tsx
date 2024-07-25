@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { getRecentMovies } from '@/lib/trakt/User';
-import { MovieCard } from './cards/MovieCard';
+import { MovieCard } from './Cards/MovieCard';
 
 export const RecentMoviesComponent = async () => {
 	const movies = await getRecentMovies({ limit: 15 });
