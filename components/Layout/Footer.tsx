@@ -11,7 +11,7 @@ const Footer = () => {
 	const pathname = usePathname();
 	const isBlogRoute = pathname.startsWith('/blogs/') && pathname !== '/blogs/';
 	return (
-		<footer className="rounded-lg bg-grad bg-neutral-800 p-4 text-gray-200 shadow md:px-6 md:py-8">
+		<footer className='mt-10 shadow md:px-6 md:py-8'>
 			<div className="container mx-auto w-11/12 pb-8 sm:w-9/12 sm:pb-10 md:w-7/12">
 				<div className="mb-10 sm:flex sm:items-center sm:justify-between">
 					<Link href={isBlogRoute ? '/blogs' : '/'} className="mb-4 flex items-center sm:mb-0">

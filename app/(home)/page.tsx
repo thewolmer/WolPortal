@@ -4,6 +4,7 @@ import Reveal from '@/components/Animation/Reveal';
 import { generateSeo } from '@/utils/generateSeo';
 
 import { Image } from '@/components/Image';
+import { BitMoji } from './components/BitMoji';
 import LinkTab from './components/LinkTab';
 import { MeSection } from './components/MeSection';
 import ProjectsSection from './components/ProjectsSection';
@@ -22,15 +23,7 @@ function Home() {
 		<main className="container">
 			<Reveal>
 				<header className="flex flex-col justify-between py-10 md:flex-row md:items-center">
-					<div className="flex items-center justify-center">
-						<Image
-							src={'/images/hi.png'}
-							alt="Profile Picture"
-							width={420}
-							height={420}
-							className="w-56 rounded-full"
-						/>
-					</div>
+					<BitMoji />
 					<div id="top" className="md:w-[66%]">
 						<div className="space-y-2">
 							<div className="">
