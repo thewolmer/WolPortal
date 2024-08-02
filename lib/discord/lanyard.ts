@@ -1,8 +1,8 @@
 import { discord } from '@/constants/global';
 
-import type { Lanyard } from '@/types/Lanyard';
+import type { LanyardResponse } from '@/types/lanyard';
 
-export const getDiscordStatus = async (): Promise<Lanyard | undefined> => {
+export const getDiscordStatus = async (): Promise<LanyardResponse | undefined> => {
 	const res = await fetch(`https://api.lanyard.rest/v1/users/${discord}`, {
 		cache: 'no-store',
 	});

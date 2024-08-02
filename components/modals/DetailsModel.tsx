@@ -19,8 +19,6 @@ export const DetailsModel = () => {
 	const type = useDetailsModel((state) => state.type);
 	const [showPoster, setShowPoster] = useState(false);
 
-	console.log(id, type);
-
 	const { data, isLoading } = useSWR(type && id ? [type, id] : null, () => getInfo(type, id.toString()), {
 		revalidateIfStale: false,
 		revalidateOnFocus: false,
