@@ -5,7 +5,7 @@ import Footer from '@/components/Layout/Footer';
 import Navbar from '@/components/Layout/Navbar';
 import { geistmono, inter } from '@/components/fonts';
 import { GoogleAnalytics } from '@/utils/GoogleAnalytics';
-import { Lanyard } from './(home)/Lanyard';
+import { LanyardPC } from '../components/Modules/Lanyard.PC';
 import { Providers } from './providers';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					<main className="container mx-auto min-h-screen max-w-4xl p-10 md:p-0">{children}</main>
 					<Footer />
 				</Providers>
-				<Lanyard />
+				<LanyardPC />
 			</body>
 		</html>
 	);

@@ -12,7 +12,7 @@ interface LanyardCardProps extends React.HTMLProps<HTMLDivElement> {
 	children: React.ReactNode;
 }
 
-const LanyardCard = ({ children, ...props }: LanyardCardProps) => {
+const LanyardCard = ({ children }: LanyardCardProps) => {
 	const anim = {
 		initial: { opacity: 0, scale: 0.9 },
 		enter: { opacity: 1, scale: 1 },
@@ -27,7 +27,7 @@ const LanyardCard = ({ children, ...props }: LanyardCardProps) => {
 				initial="initial"
 				animate="enter"
 				exit="exit"
-				className="group fixed right-6 bottom-6 z-20 flex h-fit w-full max-w-xs flex-col gap-3 rounded-md bg-gradient-to-br from-white/10 via-violet-400/10 to-blue-400/10 p-4 shadow-xl backdrop-blur-md transition-all duration-300 hover:scale-105"
+				className="group right-6 bottom-6 z-20 hidden h-fit w-full max-w-xs flex-col gap-3 rounded-md bg-gradient-to-br from-white/10 via-violet-400/10 to-blue-400/10 p-4 shadow-xl backdrop-blur-md transition-all duration-300 hover:scale-105 md:fixed md:flex"
 			>
 				<div>{children}</div>
 			</motion.div>
@@ -35,7 +35,7 @@ const LanyardCard = ({ children, ...props }: LanyardCardProps) => {
 	);
 };
 
-export const Lanyard = () => {
+export const LanyardPC = () => {
 	const { presence, error } = useLanyard(discord);
 
 	const data = presence as LanyardData;

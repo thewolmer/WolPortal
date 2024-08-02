@@ -13,9 +13,9 @@ const Links = [
 		description: 'Read my blogs on various topics and technologies.',
 	},
 	{
-		label: 'Songs',
-		href: '/songs',
-		description: 'Music connects people. Check out my recently played songs.',
+		label: 'Contact',
+		href: '/contact',
+		description: 'Contact me for potential projects or collaborations.',
 	},
 	{
 		label: 'Watchlist',
