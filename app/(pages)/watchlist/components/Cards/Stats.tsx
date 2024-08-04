@@ -12,7 +12,7 @@ export const Stats = async () => {
 		return <div>Failed to load stats</div>;
 	}
 	return (
-		<div className="flex w-full justify-between gap-5">
+		<div className='flex w-full flex-col justify-between gap-5 md:flex-row'>
 			<Card className="w-full">
 				<CardHeader>
 					<div className="flex items-center justify-center gap-2">

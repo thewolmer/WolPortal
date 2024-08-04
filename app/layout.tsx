@@ -13,7 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		<html lang="en">
 			<GoogleAnalytics GA_TRACKING_ID={process.env.GA_TRACKING_ID as string} />
 			<body className={classNames(inter.className, geistmono.variable, 'relative w-full')}>
-				<Providers attribute="class" defaultTheme="system">
+				<Providers>
 					<Navbar />
 					<main className="container mx-auto min-h-screen max-w-4xl p-10 md:p-0">{children}</main>
 					<Footer />

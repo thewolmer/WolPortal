@@ -7,14 +7,13 @@ export default function Loading() {
 	return (
 		<main className="container ">
 			<Header title="Repositories" description="My public posts on github" />
-			<div className="grid w-full items-center justify-center gap-4 md:grid-cols-2">
+			<div className=" flex w-full flex-col items-center justify-center gap-4 md:grid md:grid-cols-2">
 				{[0, 1, 2, 3].map((repo) => (
 					<Card key={repo} className="flex h-full w-full flex-col justify-between">
 						<div className="w-full">
 							<CardHeader className="w-full">
 								<div className="flex w-full items-center space-x-2">
 									<RiGitRepositoryFill size={22} className="text-secondary" />
-
 									<Skeleton className="h-3 w-[40%]" />
 								</div>
 							</CardHeader>

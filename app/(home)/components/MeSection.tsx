@@ -30,7 +30,7 @@ export const MeSection = () => {
 			<h3 className="px-4 font-bold text-lg text-primary uppercase">Me</h3>
 			<div className="mt-4 grid gap-4 md:grid-cols-2">
 				{Links.map((link) => (
-					<Card key={link.label}>
+					<Card key={link.label} className="transition hover:bg-muted/60">
 						<Link href={link.href}>
 							<CardHeader className="font-extrabold text-primary text-xl"> {link.label}</CardHeader>
 							<CardContent className="font-mono text-muted-foreground tracking-tight">

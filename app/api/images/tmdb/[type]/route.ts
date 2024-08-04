@@ -17,8 +17,8 @@ export async function GET(request: NextRequest, { params }: { params: { type: st
 
 	try {
 		const response = await fetch(
-			`https://tmdb-proxy-nine.vercel.app/api/${id}?type=${type}`,
-			// `https://api.themoviedb.org/3/${type}/${id}/images?api_key=${process.env.TMDB_API_KEY}`,
+			// `https://tmdb-proxy-nine.vercel.app/api/${id}?type=${type}`,
+			`https://api.themoviedb.org/3/${type}/${id}/images?api_key=${process.env.TMDB_API_KEY}`,
 		);
 
 		const data = await response.json();

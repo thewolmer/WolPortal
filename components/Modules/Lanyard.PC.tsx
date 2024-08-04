@@ -6,8 +6,9 @@ import { useLanyard } from '@/hooks/use-lanyard';
 import type { LanyardData } from '@/types/lanyard';
 import { AnimatePresence, motion } from 'framer-motion';
 import type React from 'react';
+import { useState } from 'react';
+import { BiHide } from 'react-icons/bi';
 import { RiRadioButtonLine } from 'react-icons/ri';
-
 interface LanyardCardProps extends React.HTMLProps<HTMLDivElement> {
 	children: React.ReactNode;
 }
@@ -18,19 +19,37 @@ const LanyardCard = ({ children }: LanyardCardProps) => {
 		enter: { opacity: 1, scale: 1 },
 		exit: { opacity: 0, scale: 0.9 },
 	};
-
+	const [view, setView] = useState(true);
 	return (
 		<AnimatePresence>
-			<motion.div
-				layout
-				variants={anim}
-				initial="initial"
-				animate="enter"
-				exit="exit"
-				className="group right-6 bottom-6 z-20 hidden h-fit w-full max-w-xs flex-col gap-3 rounded-md bg-gradient-to-br from-white/10 via-violet-400/10 to-blue-400/10 p-4 shadow-xl backdrop-blur-md transition-all duration-300 hover:scale-105 md:fixed md:flex"
-			>
-				<div>{children}</div>
-			</motion.div>
+			{view && (
+				<motion.div
+					layout
+					variants={anim}
+					initial="initial"
+					animate="enter"
+					exit="exit"
+					className="group relative right-6 bottom-6 z-20 hidden h-fit w-full max-w-xs flex-col gap-3 rounded-md bg-gradient-to-br from-white/10 via-violet-400/10 to-blue-400/10 p-4 shadow-xl backdrop-blur-md transition-all duration-300 hover:scale-105 md:fixed md:flex"
+				>
+					<div>{children}</div>
+					<BiHide
+						className="absolute top-2 right-2 cursor-pointer opacity-0 transition-all duration-300 hover:scale-150 group-hover:opacity-100"
+						onClick={() => setView(false)}
+					/>
+				</motion.div>
+			)}
+			{!view && (
+				<motion.div
+					initial={{ opacity: 0, scale: 0.9 }}
+					animate={{ opacity: 1, scale: 1 }}
+					exit={{ opacity: 0, scale: 0.9 }}
+					transition={{ type: 'easeInOut', delay: 0.5 }}
+					className="group relative right-6 bottom-6 z-20 hidden h-fit cursor-pointer rounded-md bg-gradient-to-br from-white/10 via-violet-400/10 to-blue-400/10 p-4 shadow-xl backdrop-blur-md transition-all duration-300 hover:scale-150 md:fixed md:flex"
+					onClick={() => setView(true)}
+				>
+					<RiRadioButtonLine className="animate-pulse text-green-500" />
+				</motion.div>
+			)}
 		</AnimatePresence>
 	);
 };
@@ -125,8 +144,14 @@ export const LanyardPC = () => {
 	if (isPlayingSpotify && spotify) {
 		return (
 			<LanyardCard className="h-full w-full">
-				<div className="flex h-full items-center gap-5 overflow-hidden">
-					<div className="h-full min-w-fit" style={{ position: 'relative', flexShrink: 0 }}>
+				<div className=" flex h-full items-center gap-5 overflow-hidden">
+					<motion.div
+						initial={{ opacity: 0, y: 30 }}
+						animate={{ opacity: 1, y: 0 }}
+						exit={{ opacity: 0, y: 30 }}
+						className="h-full min-w-fit"
+						style={{ position: 'relative', flexShrink: 0 }}
+					>
 						<Image
 							src={data.spotify.album_art_url}
 							alt="Spotify Album Art"
@@ -134,7 +159,7 @@ export const LanyardPC = () => {
 							height={200}
 							className="h-16 w-16 rounded-md "
 						/>
-					</div>
+					</motion.div>
 
 					<div className="w-full">
 						<motion.div

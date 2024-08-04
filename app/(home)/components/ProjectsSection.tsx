@@ -65,13 +65,13 @@ const webProjects = [
 		start: '',
 		end: 'Feb-2024',
 	},
-	{
-		name: 'Plexolyt E-commerce',
-		descrip: 'A fullstack e-commerce site along with dashboard.',
-		link: 'https://plexolyt.com/',
-		start: '',
-		end: 'May-2024',
-	},
+	// {
+	// 	name: 'Plexolyt E-commerce',
+	// 	descrip: 'A fullstack e-commerce site along with dashboard.',
+	// 	link: 'https://plexolyt.com/',
+	// 	start: '',
+	// 	end: 'May-2024',
+	// },
 	{
 		name: 'Floor Price Discord bot',
 		descrip: 'A discord bot to show floor price of NFT projects by changing nickname',
@@ -93,16 +93,16 @@ const ProjectsSection = () => (
 		<Reveal>
 			<div>
 				<div className="flex items-center justify-between gap-4">
-					<h3 className="px-4 font-bold text-lg text-secondary uppercase">Web-3 Contribution</h3>
+					<h3 className="px-4 font-bold text-lg text-muted-foreground/50 uppercase">Work</h3>
 				</div>
 			</div>
 			<div className="my-4 grid gap-2 md:grid-cols-2">
 				{nftProjects.map((project) => (
 					<motion.div variants={fadeInUp} key={project.name}>
 						<Link href={project.link}>
-							<Card className="h-full w-full hover:bg-muted/60">
+							<Card className="h-full w-full transition hover:bg-muted/60">
 								<CardHeader className="flex-row justify-between gap-2 p-0 px-6 py-2 pt-6 ">
-									<span className="text-sm md:text-lg">{project.name}</span>
+									<span className="font-semibold text-sm md:text-lg">{project.name}</span>
 									<span className="flex items-start font-mono text-secondary text-xs">
 										{project.start} - {project.end}
 									</span>
@@ -115,10 +115,10 @@ const ProjectsSection = () => (
 			</div>
 		</Reveal>
 		{/*  */}
-		<Reveal>
+		{/* <Reveal>
 			<div>
 				<div className="flex items-center justify-between gap-4 ">
-					<h3 className="px-4 font-bold text-lg text-neutral-700 uppercase"> Dev Projects</h3>
+					<h3 className="px-4 font-bold text-lg text-muted-foreground/50 uppercase"> Dev Projects</h3>
 				</div>
 			</div>
 			<div className="my-4 grid gap-2 md:grid-cols-2 ">
@@ -138,7 +138,7 @@ const ProjectsSection = () => (
 					</motion.div>
 				))}
 			</div>
-		</Reveal>
+		</Reveal> */}
 	</section>
 );
 

@@ -35,7 +35,7 @@ const LinkTab = () => (
 			{Links.map((link, index) => (
 				// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 				<Link key={index} href={link.link}>
-					<link.icon className="text-2xl text-accent-foreground transition duration-200 hover:text-wolwhite" />
+					<link.icon className='text-2xl text-accent-foreground transition duration-200 hover:scale-105 hover:text-primary hover:text-wolwhite' />
 				</Link>
 			))}
 		</div>

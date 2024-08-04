@@ -12,7 +12,7 @@ export const RecentMoviesComponent = async () => {
 	return (
 		<div className="">
 			<h3 className="px-4 font-bold font-mono text-lg text-primary">Recently Watched Movies</h3>
-			<Carousel className=" w-full">
+			<Carousel className=" w-full ">
 				<CarouselContent className="-ml-1 w-full">
 					{movies.map((movie) => {
 						return (
