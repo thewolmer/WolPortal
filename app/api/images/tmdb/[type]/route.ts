@@ -17,7 +17,8 @@ export async function GET(request: NextRequest, { params }: { params: { type: st
 
 	try {
 		const response = await fetch(
-			`https://tmdb-proxy-nine.vercel.app/api/${id}?type=${type}`,
+			`https://wolportal.vercel.app/api/images/tmdb/${type}?id=${id}`,
+			// `https://tmdb-proxy-nine.vercel.app/api/${id}?type=${type} `,
 			// `https://api.themoviedb.org/3/${type}/${id}/images?api_key=${process.env.TMDB_API_KEY}`,
 		);
 
