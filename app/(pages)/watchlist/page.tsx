@@ -1,0 +1,26 @@
+import Header from '@/components/Layout/Header';
+
+import React from 'react';
+
+import { Stats } from './components/Cards/Stats';
+import { RecentMoviesComponent } from './components/RecentMoviesComponent';
+import { RecentShowsComponent } from './components/RecentShowsComponent';
+import { TopRatedComponent } from './components/TopRatedComponents';
+import { WatchlistComponent } from './components/WatchListComponent';
+
+const page = async () => {
+	return (
+		<>
+			<Header title="Movies and Shows" description="Track of my watched movies, TV shows and Watchlist" />
+			<section className="no-select flex min-h-screen flex-col gap-16">
+				<RecentMoviesComponent />
+				<RecentShowsComponent />
+				<Stats />
+				<WatchlistComponent />
+				<TopRatedComponent />
+			</section>
+		</>
+	);
+};
+
+export default page;
