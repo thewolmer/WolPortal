@@ -8,7 +8,7 @@ export const ChartSkeleton = () => {
 		<Card>
 			<CardHeader className="flex items-center gap-2 space-y-0 border-b py-5 sm:flex-row">
 				<div className="grid flex-1 gap-1 text-center sm:text-left">
-					<CardTitle className="font-mono">Repository Activity</CardTitle>
+					<CardTitle className="font-mono text-sm md:text-base">Repository Activity</CardTitle>
 					<CardDescription className="font-mono">
 						Showing total commits since the creation of this repo.
 					</CardDescription>
@@ -39,7 +39,7 @@ export const ContributorsSkeleton = () => {
 export const ReadmeSkeleton = () => {
 	const skeletons = Array.from({ length: 20 }, () => Math.floor(Math.random() * 41) + 60);
 	return (
-		<div className='flex w-full flex-col gap-5 md:w-4/6'>
+		<div className="flex w-full flex-col gap-5 md:w-4/6">
 			<h2 className="font-bold font-mono text-primary text-xl">README.md</h2>
 			<article className="mx-auto w-full space-y-2">
 				<Skeleton className="h-8 w-full" />

@@ -1,4 +1,8 @@
+'use client';
+import Reveal from '@/components/Animation/Reveal';
 import { Card } from '@/components/ui/card';
+import { fadeInUp } from '@/utils';
+import { motion } from 'framer-motion';
 import React from 'react';
 import { BiLogoNetlify } from 'react-icons/bi';
 import { FaNodeJs } from 'react-icons/fa';
@@ -26,7 +30,7 @@ const development = [
 		color: '#2f74c0',
 	},
 	{
-		name: 'React & Next',
+		name: 'Next.js',
 		icon: SiNextdotjs,
 		color: '#d2d2d2',
 	},
@@ -116,54 +120,56 @@ const services = [
 ];
 
 const TechUsed = () => (
-	<section id="technologies" className="mt-6">
-		<h3 className="px-4 font-bold text-lg text-neutral-700 uppercase ">Technologies I use</h3>
-		<div className="mt-8 flex flex-col space-y-6">
-			<section>
-				<h5 className="mx-4 mb-4 border-neutral-600/10 border-b pb-2 font-medium text-lg text-neutral-600/70">
-					Tech Stack
-				</h5>
+	<Reveal>
+		<motion.section variants={fadeInUp} id="technologies" className="mt-6">
+			<h3 className="px-4 font-bold text-lg text-neutral-700 uppercase ">Technologies I use</h3>
+			<div className="mt-8 flex flex-col space-y-6">
+				<section>
+					<h5 className="mx-4 mb-4 border-neutral-600/10 border-b pb-2 font-medium text-lg text-neutral-600/70">
+						Tech Stack
+					</h5>
 
-				<div className="grid grid-cols-1 gap-x-2 gap-y-2 px-4 md:grid-cols-3 lg:grid-cols-4">
-					{development.map((item, index) => (
-						<Card
-							key={item.name}
-							className="flex cursor-pointer select-none items-center space-x-2 overflow-hidden rounded-md p-3 transition-colors "
-						>
-							<div
-								className={'flex items-center justify-center rounded-lg p-2 '}
-								style={{ background: `${item.color}1A` }}
+					<div className="grid grid-cols-2 gap-x-2 gap-y-2 px-4 md:grid-cols-3 lg:grid-cols-4">
+						{development.map((item) => (
+							<Card
+								key={item.name}
+								className="flex cursor-pointer select-none items-center space-x-2 overflow-hidden rounded-md p-3 transition-colors "
 							>
-								<item.icon className="bx bxl-typescript text-xl" style={{ color: item.color }} />
-							</div>
-							<span className="flex-1 truncate font-semibold text-muted-foreground text-sm">{item.name}</span>
-						</Card>
-					))}
-				</div>
-			</section>
-			<section>
-				<h5 className="mx-4 mb-4 border-neutral-600/10 border-b pb-2 font-medium text-lg text-neutral-600/70">
-					Services & Tools
-				</h5>
-				<div className="grid grid-cols-1 gap-x-2 gap-y-2 px-4 md:grid-cols-3 lg:grid-cols-4">
-					{services.map((item, index) => (
-						<Card
-							key={item.name}
-							className="flex cursor-pointer select-none items-center space-x-2 overflow-hidden rounded-md p-3"
-						>
-							<div
-								className={'flex items-center justify-center rounded-md p-2 '}
-								style={{ background: `${item.color}1A` }}
+								<div
+									className={'flex items-center justify-center rounded-lg p-2 '}
+									style={{ background: `${item.color}1A` }}
+								>
+									<item.icon className="text-xl" style={{ color: item.color }} />
+								</div>
+								<span className="flex-1 truncate font-semibold text-muted-foreground text-xs">{item.name}</span>
+							</Card>
+						))}
+					</div>
+				</section>
+				<section>
+					<h5 className="mx-4 mb-4 border-neutral-600/10 border-b pb-2 font-medium text-lg text-neutral-600/70">
+						Services & Tools
+					</h5>
+					<div className="grid grid-cols-2 gap-x-2 gap-y-2 px-4 md:grid-cols-3 lg:grid-cols-4">
+						{services.map((item) => (
+							<Card
+								key={item.name}
+								className="flex cursor-pointer select-none items-center space-x-2 overflow-hidden rounded-md p-3"
 							>
-								<item.icon className="text-xl" style={{ color: item.color }} />
-							</div>
-							<span className="flex-1 truncate font-semibold text-muted-foreground text-sm">{item.name}</span>
-						</Card>
-					))}
-				</div>
-			</section>
-		</div>
-	</section>
+								<div
+									className={'flex items-center justify-center rounded-md p-2 '}
+									style={{ background: `${item.color}1A` }}
+								>
+									<item.icon className="text-xl" style={{ color: item.color }} />
+								</div>
+								<span className="flex-1 truncate font-semibold text-muted-foreground text-xs">{item.name}</span>
+							</Card>
+						))}
+					</div>
+				</section>
+			</div>
+		</motion.section>
+	</Reveal>
 );
 
 export default TechUsed;

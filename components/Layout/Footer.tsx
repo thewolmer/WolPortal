@@ -5,6 +5,7 @@ import React from 'react';
 import { Image } from '@/components/Image';
 import { Link } from '@/components/Link';
 import { repository } from '@/constants/global';
+import { cn } from '@/lib/utils';
 import { ThemeToggle } from '../Modules/ThemeToggle';
 import { buttonVariants } from '../ui/button';
 
@@ -26,8 +27,8 @@ const Footer = () => {
 						/>
 					</Link>
 					<span className="self-center whitespace-nowrap font-semibold text-sm ">
-						This Website is Open Source{' '}
-						<Link href={repository} className={buttonVariants({ variant: 'link', className: 'mx-0 px-0' })}>
+						This Website is Open Source
+						<Link href={repository} className={cn(buttonVariants({ variant: 'link' }), 'px-1 py-0')}>
 							on Github
 						</Link>
 					</span>
