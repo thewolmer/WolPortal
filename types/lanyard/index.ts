@@ -51,7 +51,7 @@ export interface LanyardActivity {
 	type: number;
 	timestamps: Timestamps2;
 	application_id?: string;
-	assets: Assets;
+	assets: LanyardAssets;
 	created_at: number;
 	flags?: number;
 	state?: string;

@@ -1,8 +1,8 @@
 'use server';
 import { github } from '@/constants/global';
 
-import type { Contributor } from '@/types/Contributor';
-import type { Repos } from '@/types/Repos';
+import type { Contributor } from '@/types/github/Contributor';
+import type { Repos } from '@/types/github/Repos';
 import { GithubGet } from './helper';
 
 export const getRepos = async (): Promise<Repos[] | undefined> => {

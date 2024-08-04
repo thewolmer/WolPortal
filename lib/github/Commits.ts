@@ -1,6 +1,6 @@
 'use server';
 import { github } from '@/constants/global';
-import type { CommitType } from '@/types/Commit';
+import type { CommitType } from '@/types/github/Commit';
 import { GithubGet } from './helper';
 
 export const getRepoAllCommits = async (repo: string): Promise<CommitType[] | undefined> => {
