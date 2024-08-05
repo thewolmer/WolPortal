@@ -6,7 +6,7 @@ import PostPreview from './components/PostPreview';
 
 export const generateMetadata = () =>
 	generateSeo({
-		title: 'WolPortal // Blogs',
+		title: 'Blogs // WolPortal',
 		description: 'Read latest blog posts by Wolmer on various topics. Gain insights, information, and perspectives.',
 		url: '/blogs',
 	});

@@ -12,7 +12,7 @@ import { RiGitRepositoryFill } from 'react-icons/ri';
 
 export const generateMetadata = () =>
 	generateSeo({
-		title: 'WolPortal // Repos',
+		title: 'Repos // WolPortal',
 		description: 'Browse through public GitHub repositories of Wolmer. Explore projects, code, and contributions.',
 		url: '/repos',
 	});
