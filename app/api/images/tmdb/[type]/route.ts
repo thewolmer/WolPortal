@@ -1,6 +1,6 @@
 import { type NextRequest, NextResponse } from 'next/server';
 
-export const revalidate = 1;
+export const revalidate = 24 * 60 * 60;
 
 export async function GET(request: NextRequest, { params }: { params: { type: string } }) {
 	const id = request.nextUrl.searchParams.get('id');
