@@ -8,7 +8,6 @@ import { CalendarIcon, GitCommitVerticalIcon, Github, UserIcon } from 'lucide-re
 import React from 'react';
 
 export const CommitsAccordion = async ({ name }: { name: string }) => {
-	// await new Promise((resolve) => setTimeout(resolve, 2000));
 	let page = 1;
 	let activity = await getRepoCommits(name, { page: 1 });
 	const handleNext = async () => {
