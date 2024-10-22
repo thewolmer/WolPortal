@@ -2,11 +2,19 @@ import Header from '@/components/Layout/Header';
 
 import React from 'react';
 
+import { generateSeo } from '@/utils/generateSeo';
 import { Stats } from './components/Cards/Stats';
 import { RecentMoviesComponent } from './components/RecentMoviesComponent';
 import { RecentShowsComponent } from './components/RecentShowsComponent';
 import { TopRatedComponent } from './components/TopRatedComponents';
 import { WatchlistComponent } from './components/WatchListComponent';
+
+export const generateMetadata = () =>
+	generateSeo({
+		title: 'Watchlist // WolPortal',
+		description: 'A track of watched movies, shows and a watchlist.',
+		url: '/watchlist',
+	});
 
 const page = async () => {
 	return (

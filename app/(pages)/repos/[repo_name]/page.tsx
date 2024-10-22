@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { buttonVariants } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { getRepoByName } from '@/lib/github/Repos';
+import { generateSeo } from '@/utils/generateSeo';
 import { getLanguageIcon } from '@/utils/getLanguageIcon';
 import clsx from 'clsx';
 import { formatDate, formatDistance } from 'date-fns';
@@ -21,12 +22,22 @@ import { ContributorsSkeleton } from './components/LoadingFallback';
 import { ReadmeSkeleton } from './components/LoadingFallback';
 import { CommitsAccordionSkeleton } from './components/LoadingFallback';
 import { ReadmeSection } from './components/ReadmeSection';
-
 interface Props {
 	params: {
 		repo_name: string;
 	};
 }
+
+export const generateMetadata = async ({ params }: Props) => {
+	const data = await getRepoByName(params.repo_name);
+	if (!data) return;
+	return generateSeo({
+		title: `${params.repo_name} // WolPortal Repos`,
+		description: `${data?.description}`,
+		url: `/repos/${params.repo_name}`,
+	});
+};
+
 const page = async ({ params }: Props) => {
 	const name = params.repo_name;
 	const data = await getRepoByName(name);

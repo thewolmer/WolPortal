@@ -3,7 +3,6 @@ import { Link } from '@/components/Link';
 import Reveal from '@/components/Animation/Reveal';
 import { generateSeo } from '@/utils/generateSeo';
 
-import { Image } from '@/components/Image';
 import { BitMoji } from './components/BitMoji';
 import LinkTab from './components/LinkTab';
 import { MeSection } from './components/MeSection';
