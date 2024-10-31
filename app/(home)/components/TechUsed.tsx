@@ -6,7 +6,6 @@ import { BiLogoNetlify } from 'react-icons/bi';
 import { FaNodeJs } from 'react-icons/fa';
 import { RiSupabaseFill, RiTailwindCssFill, RiVuejsFill } from 'react-icons/ri';
 import {
-	SiAmazonaws,
 	SiBun,
 	SiDiscord,
 	SiFirebase,
@@ -78,11 +77,6 @@ const services = [
 	{
 		name: 'Vercel',
 		icon: SiVercel,
-		color: '#d2d2d2',
-	},
-	{
-		name: 'AWS',
-		icon: SiAmazonaws,
 		color: '#d2d2d2',
 	},
 	{
