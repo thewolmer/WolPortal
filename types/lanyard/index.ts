@@ -59,6 +59,7 @@ export interface LanyardActivity {
 	details?: string;
 	sync_id?: string;
 	party?: Party;
+	platform?: string;
 }
 
 interface Timestamps2 {
