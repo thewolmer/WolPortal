@@ -5,12 +5,12 @@ const Links = [
 	{
 		label: 'Repositories',
 		href: '/repos',
-		description: ' Check out my repositories and projects i have been working on.',
+		description: ' Check out my github repositories that i have been working on.',
 	},
 	{
-		label: 'Blogs',
-		href: '/blogs',
-		description: 'Read my blogs on various topics and technologies.',
+		label: 'Projects',
+		href: '/projects',
+		description: 'View some of my *not so cool* personal projects.',
 	},
 	{
 		label: 'Contact',

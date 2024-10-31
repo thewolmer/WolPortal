@@ -4,7 +4,6 @@ import { MdOutlineRunningWithErrors } from 'react-icons/md';
 import { CommitsChart } from './CommitsChart';
 
 export const ChartSection = async ({ name }: { name: string }) => {
-	// await new Promise((resolve) => setTimeout(resolve, 2000));
 	const activity = await getRepoAllCommits(name);
 	if (!activity)
 		return (

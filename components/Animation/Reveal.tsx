@@ -23,7 +23,35 @@ const Reveal = ({ children }: Props) => {
 	return (
 		<section ref={rootContainer}>
 			<div ref={ref} className="relative w-full">
-				<motion.div variants={fadeInUp} initial="hidden" animate={mainControls}>
+				<motion.div
+					variants={{
+						hidden: {
+							opacity: 0,
+							y: 20,
+							filter: 'blur(10px)',
+						},
+						exit: {
+							opacity: 0,
+							y: 20,
+							filter: 'blur(10px)',
+						},
+						visible: {
+							opacity: 1,
+							y: 0,
+							filter: 'blur(0px)',
+							transition: {
+								duration: 0.6,
+								ease: 'easeOut',
+								staggerChildren: 0.1,
+								type: 'ease',
+								bounce: 0.3,
+							},
+						},
+					}}
+					initial="hidden"
+					animate={mainControls}
+					exit="exit"
+				>
 					{children}
 				</motion.div>
 			</div>

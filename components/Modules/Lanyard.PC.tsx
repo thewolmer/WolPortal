@@ -4,7 +4,7 @@ import { Image } from '@/components/Image';
 import { discord } from '@/constants/global';
 import { useLanyard } from '@/hooks/use-lanyard';
 import type { LanyardData } from '@/types/lanyard';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, MotionConfig, animate, motion } from 'framer-motion';
 import type React from 'react';
 import { useState } from 'react';
 import { BiHide } from 'react-icons/bi';
@@ -12,53 +12,19 @@ import { RiRadioButtonLine } from 'react-icons/ri';
 interface LanyardCardProps extends React.HTMLProps<HTMLDivElement> {
 	children: React.ReactNode;
 }
-
-const LanyardCard = ({ children }: LanyardCardProps) => {
-	const anim = {
-		initial: { opacity: 0, scale: 0.9 },
-		enter: { opacity: 1, scale: 1 },
-		exit: { opacity: 0, scale: 0.9 },
-	};
-	const [view, setView] = useState(true);
-	return (
-		<AnimatePresence>
-			{view && (
-				<motion.div
-					layout
-					variants={anim}
-					initial="initial"
-					animate="enter"
-					exit="exit"
-					className="group relative right-6 bottom-6 z-20 hidden h-fit w-full max-w-xs flex-col gap-3 rounded-md bg-gradient-to-br from-white/10 via-violet-400/10 to-blue-400/10 p-4 shadow-xl backdrop-blur-md transition-all duration-300 hover:scale-105 md:fixed md:flex"
-				>
-					<div>{children}</div>
-					<BiHide
-						className="absolute top-2 right-2 cursor-pointer opacity-0 transition-all duration-300 hover:scale-150 group-hover:opacity-100"
-						onClick={() => setView(false)}
-					/>
-				</motion.div>
-			)}
-			{!view && (
-				<motion.div
-					initial={{ opacity: 0, scale: 0.9 }}
-					animate={{ opacity: 1, scale: 1 }}
-					exit={{ opacity: 0, scale: 0.9 }}
-					transition={{ type: 'easeInOut', delay: 0.5 }}
-					className="group relative right-6 bottom-6 z-20 hidden h-fit cursor-pointer rounded-md bg-gradient-to-br from-white/10 via-violet-400/10 to-blue-400/10 p-4 shadow-xl backdrop-blur-md transition-all duration-300 hover:scale-150 md:fixed md:flex"
-					onClick={() => setView(true)}
-				>
-					<RiRadioButtonLine className="animate-pulse text-green-500" />
-				</motion.div>
-			)}
-		</AnimatePresence>
-	);
+const TRANSITION = {
+	type: 'spring',
+	bounce: 1,
+	duration: 0.3,
+	stiffness: 85,
 };
 
 export const LanyardPC = () => {
 	const { presence, error } = useLanyard(discord);
+	const [isHovered, setHovered] = useState(false);
+	if (!presence) return null;
 
 	const data = presence as LanyardData;
-	if (error || !data) return;
 
 	// const data = {
 	// 	kv: {},
@@ -135,89 +101,204 @@ export const LanyardPC = () => {
 	// 	success: true,
 	// };
 
-	const { discord_user, discord_status, activities } = data;
+	const { activities } = data;
 
 	const isPlayingSpotify = data.listening_to_spotify;
 	const spotify = activities?.find((activity) => activity.name === 'Spotify');
 	const activity = activities?.filter((activity) => activity.name !== 'Spotify');
 
-	if (isPlayingSpotify && spotify) {
+	if (!isPlayingSpotify && !activity[0]) return null;
+
+	if (isPlayingSpotify || activity[0]) {
 		return (
-			<LanyardCard className="h-full w-full">
-				<div className=" flex h-full items-center gap-5 overflow-hidden">
-					<motion.div
-						initial={{ opacity: 0, y: 30 }}
-						animate={{ opacity: 1, y: 0 }}
-						exit={{ opacity: 0, y: 30 }}
-						className="h-full min-w-fit"
-						style={{ position: 'relative', flexShrink: 0 }}
-					>
-						<Image
-							src={data.spotify.album_art_url}
-							alt="Spotify Album Art"
-							width={200}
-							height={200}
-							className="h-16 w-16 rounded-md "
+			<MotionConfig transition={TRANSITION}>
+				<motion.div
+					layout
+					initial="hidden"
+					animate="visible"
+					exit="exit"
+					variants={{
+						hidden: {
+							opacity: 0,
+						},
+						exit: {
+							opacity: 0,
+						},
+						visible: {
+							opacity: 1,
+						},
+					}}
+					transition={{
+						delay: 0.3,
+						duration: 0.7,
+					}}
+					onHoverStart={() => setHovered(true)}
+					onHoverEnd={() => setHovered(false)}
+				>
+					{isPlayingSpotify && spotify && !activity[0] && (
+						<StatusCard
+							isHovered={isHovered}
+							img={data.spotify.album_art_url as string}
+							title={'Listening to Spotify'}
+							line1={spotify?.details as string}
+							line2={spotify?.state as string}
 						/>
-					</motion.div>
-
-					<div className="w-full">
-						<motion.div
-							initial={{ opacity: 0, y: 30 }}
-							animate={{ opacity: 1, y: 0 }}
-							exit={{ opacity: 0, y: 30 }}
-							transition={{ type: 'easeInOut', duration: 0.15 }}
-							className="flex w-full flex-nowrap items-center overflow-hidden text-ellipsis font-bold text-muted-foreground"
-						>
-							<RiRadioButtonLine className="mr-1 animate-pulse text-green-500" />
-							<span className=" text-nowrap text-sm">Listening to Spotify</span>
-						</motion.div>
-
-						<motion.div
-							initial={{ opacity: 0, scale: 0.5, y: 30 }}
-							animate={{ opacity: 1, scale: 1, y: 0 }}
-							exit={{ opacity: 0, scale: 0.5, y: 30 }}
-							transition={{ type: 'easeInOut' }}
-						>
-							<p className="line-clamp-1 text-muted-foreground/70 text-sm">{spotify.details}</p>
-							<p className="line-clamp-1 text-muted-foreground/70 text-xs">{spotify.state}</p>
-						</motion.div>
-					</div>
-				</div>
-			</LanyardCard>
+					)}
+					{activity[0] && (
+						<StatusCard
+							isHovered={isHovered}
+							img={`https://cdn.discordapp.com/app-assets/${activity[0].application_id}/${activity[0].assets.large_image}.png`}
+							title={activity[0].name}
+							line1={activity[0].assets.large_text as string}
+							line2={activity[0].state as string}
+						/>
+					)}
+				</motion.div>
+			</MotionConfig>
 		);
 	}
+};
 
-	if (activity[0])
-		return (
-			<LanyardCard>
-				<div className="flex h-full items-center gap-5 ">
-					<div className="relative min-w-fit">
-						<Image
-							src={`https://cdn.discordapp.com/app-assets/${activity[0].application_id}/${activity[0].assets.large_image}.png`}
-							alt="large_image"
-							width={200}
-							height={200}
-							className="h-16 w-16 rounded-md"
-						/>
-						<Image
-							src={`https://cdn.discordapp.com/app-assets/${activity[0].application_id}/${activity[0].assets.small_image}.png`}
-							alt="small_image"
-							width={100}
-							height={100}
-							className="-right-2 -bottom-2 absolute h-6 w-6 rounded-md"
-						/>
-					</div>
-
-					<div className="">
-						<div className="flex items-center font-bold text-muted-foreground">
-							<RiRadioButtonLine className="mr-1 animate-pulse text-green-500" />
-							<span className="text-sm">{activity[0].name}</span>
+const StatusCard = ({
+	isHovered,
+	img,
+	title,
+	line1,
+	line2,
+}: { isHovered: boolean; img: string; title: string; line1: string; line2: string }) => {
+	return (
+		<AnimatePresence mode="popLayout">
+			{!isHovered ? (
+				<motion.div
+					layout
+					layoutId="container"
+					className="group relative right-6 bottom-6 z-20 hidden h-fit w-full max-w-xs cursor-pointer flex-col gap-3 rounded-md bg-white/5 p-4 shadow-xl backdrop-blur-md backdrop-opacity-30 md:fixed md:flex"
+				>
+					<motion.div className="flex h-full items-center gap-5 overflow-hidden">
+						<motion.div layoutId="status-image" className="aspect-square h-16 w-16 rounded-md">
+							<Image src={img} alt="Status" width={300} height={300} className="h-16 w-16 rounded-sm" />
+						</motion.div>
+						<div className="w-full">
+							<motion.div
+								layoutId="status-title"
+								initial="hidden"
+								animate="visible"
+								exit="exit"
+								variants={{
+									hidden: {
+										opacity: 0,
+										y: 50,
+									},
+									exit: {
+										opacity: 0,
+										y: 50,
+									},
+									visible: {
+										opacity: 1,
+										y: 0,
+									},
+								}}
+								transition={{
+									delay: 0.3,
+								}}
+								className="flex w-full flex-nowrap items-center overflow-hidden text-ellipsis font-bold text-muted-foreground"
+							>
+								<RiRadioButtonLine className="mr-1 animate-pulse text-green-500" />
+								<span className="text-nowrap text-sm">{title}</span>
+							</motion.div>
+							<motion.div
+								layoutId="status-details"
+								initial="hidden"
+								animate="visible"
+								exit="exit"
+								variants={{
+									hidden: {
+										opacity: 0,
+										y: 50,
+									},
+									exit: {
+										opacity: 0,
+										y: 50,
+									},
+									visible: {
+										opacity: 1,
+										y: 0,
+									},
+								}}
+								transition={{
+									delay: 0.3,
+								}}
+							>
+								<p className="line-clamp-1 text-muted-foreground/70 text-sm">{line1}</p>
+								<p className="line-clamp-1 text-muted-foreground/70 text-xs">{line2}</p>
+							</motion.div>
 						</div>
-						<p className="line-clamp-1 font-mono text-muted-foreground/70 text-sm">{activity[0].assets.large_text}</p>
-						<p className="line-clamp-1 font-mono text-muted-foreground/70 text-xs">{activity[0].state}</p>
-					</div>
-				</div>
-			</LanyardCard>
-		);
+					</motion.div>
+				</motion.div>
+			) : (
+				<motion.div
+					layout
+					layoutId="container"
+					className="group relative right-6 bottom-6 z-20 hidden h-fit w-full max-w-xs cursor-pointer flex-col gap-3 rounded-md bg-white/5 p-4 shadow-xl backdrop-blur-md backdrop-opacity-30 hover:scale-110 md:fixed md:flex"
+				>
+					<motion.div
+						layoutId="status-title"
+						className="flex w-full flex-nowrap items-center overflow-hidden text-ellipsis font-bold text-muted-foreground"
+						initial="hidden"
+						animate="visible"
+						exit="exit"
+						variants={{
+							hidden: {
+								opacity: 0,
+								y: 50,
+							},
+							exit: {
+								opacity: 0,
+								y: 50,
+							},
+							visible: {
+								opacity: 1,
+								y: 0,
+							},
+						}}
+						transition={{
+							delay: 0.3,
+						}}
+					>
+						<RiRadioButtonLine className="mr-1 animate-pulse text-green-500" />
+						<span className="text-nowrap text-sm">{title}</span>
+					</motion.div>
+					<motion.div className="flex flex-col items-center gap-5 overflow-hidden">
+						<motion.div layoutId="status-image" className="aspect-square h-full w-full">
+							<Image priority src={img} alt="Status" width={300} height={300} className="h-full w-full rounded-md" />
+						</motion.div>
+						<div className="w-full">
+							<motion.div
+								layoutId="status-details"
+								initial="hidden"
+								animate="visible"
+								variants={{
+									hidden: {
+										opacity: 0,
+										y: 25,
+									},
+									exit: {
+										opacity: 0,
+										y: 25,
+									},
+									visible: {
+										opacity: 1,
+										y: 0,
+									},
+								}}
+							>
+								<p className="line-clamp-1 font-semibold text-base text-muted-foreground/70">{line1}</p>
+								<p className="line-clamp-1 text-muted-foreground/70 text-sm">{line2}</p>
+							</motion.div>
+						</div>
+					</motion.div>
+				</motion.div>
+			)}
+		</AnimatePresence>
+	);
 };
