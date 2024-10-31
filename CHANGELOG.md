@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.5.0](https://github.com/thewolmer/WolPortal/branches/compare/v2.5.0..v2.4.0) (2024-10-31)
+
+
+### Others
+
+* SEO ([cf13755](https://github.com/thewolmer/WolPortal/commits/cf137558431dee63bc4f0d12b025f1680c61dd3d))
+
+
+### Features
+
+* add /projects, lanyard layout anim, trakt attribution ([d5a6672](https://github.com/thewolmer/WolPortal/commits/d5a667279cb808d6b5dd28d5eb5e80342f34ae92))
+* smooth scroll ([04622a9](https://github.com/thewolmer/WolPortal/commits/04622a945eedc3ba875bec296631462b81620158))
+
+
+### Bug Fixes
+
+* api url env ([1b5aa88](https://github.com/thewolmer/WolPortal/commits/1b5aa882e90c9bd6abbb3395de1f61f64ec3283e))
+* Details Modal ([f67d693](https://github.com/thewolmer/WolPortal/commits/f67d69333c1a79b5afe640f1ff2d203458858df4))
+* image url 2 ([9759a3a](https://github.com/thewolmer/WolPortal/commits/9759a3ab3b485bf7efaf0097ff39e4e14ac6f441))
+
+
+### Styling
+
+* **lanyard:** wip: add layout animations ([4a94cdc](https://github.com/thewolmer/WolPortal/commits/4a94cdcd20b47e5f94d6a4d6b6a8d1519394ca41))
+
 ## [2.4.0](https://github.com/thewolmer/WolPortal/branches/compare/v2.4.0..v2.3.0) (2024-08-04)
 
 
