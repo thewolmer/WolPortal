@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.5.1](https://github.com/thewolmer/WolPortal/branches/compare/v2.5.1..v2.5.0) (2024-10-31)
+
+
+### Bug Fixes
+
+* remove aws logo ([14abd5b](https://github.com/thewolmer/WolPortal/commits/14abd5bd458d55c3aacd9beb32ea184195bf009e))
+
 ## [2.5.0](https://github.com/thewolmer/WolPortal/branches/compare/v2.5.0..v2.4.0) (2024-10-31)
 
 
