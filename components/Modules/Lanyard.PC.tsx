@@ -4,14 +4,13 @@ import { Image } from '@/components/Image';
 import { discord } from '@/constants/global';
 import { useLanyard } from '@/hooks/use-lanyard';
 import type { LanyardData } from '@/types/lanyard';
+import { formatDistanceToNow } from 'date-fns';
 import { AnimatePresence, MotionConfig, animate, motion } from 'framer-motion';
 import type React from 'react';
 import { useState } from 'react';
 import { BiHide } from 'react-icons/bi';
 import { RiRadioButtonLine } from 'react-icons/ri';
-interface LanyardCardProps extends React.HTMLProps<HTMLDivElement> {
-	children: React.ReactNode;
-}
+
 const TRANSITION = {
 	type: 'spring',
 	bounce: 1,
@@ -142,15 +141,27 @@ export const LanyardPC = () => {
 							title={'Listening to Spotify'}
 							line1={spotify?.details as string}
 							line2={spotify?.state as string}
+							timestamp={data.spotify.timestamps.start}
 						/>
 					)}
-					{activity[0] && (
+					{activity[0] && activities[0].platform !== 'ps5' && (
 						<StatusCard
 							isHovered={isHovered}
 							img={`https://cdn.discordapp.com/app-assets/${activity[0].application_id}/${activity[0].assets.large_image}.png`}
 							title={activity[0].name}
 							line1={activity[0].assets.large_text as string}
 							line2={activity[0].state as string}
+							timestamp={activity[0].timestamps.start}
+						/>
+					)}
+					{activity[0] && activities[0].platform === 'ps5' && (
+						<StatusCard
+							isHovered={isHovered}
+							img={activity[0].assets.small_image?.replace(/^mp:external\/.+?\/https\//, 'https://') as string}
+							title={'Playing a game on PS5'}
+							line1={activity[0].name}
+							line2={activity[0].state as string}
+							timestamp={activity[0].timestamps.start}
 						/>
 					)}
 				</motion.div>
@@ -165,7 +176,9 @@ const StatusCard = ({
 	title,
 	line1,
 	line2,
-}: { isHovered: boolean; img: string; title: string; line1: string; line2: string }) => {
+	timestamp,
+}: { isHovered: boolean; img: string; title: string; line1: string; line2: string; timestamp: number }) => {
+	const start = new Date(timestamp);
 	return (
 		<AnimatePresence mode="popLayout">
 			{!isHovered ? (
@@ -294,6 +307,9 @@ const StatusCard = ({
 							>
 								<p className="line-clamp-1 font-semibold text-base text-muted-foreground/70">{line1}</p>
 								<p className="line-clamp-1 text-muted-foreground/70 text-sm">{line2}</p>
+								<p className="line-clamp-1 font-mono text-green-600 text-sm">
+									Started {formatDistanceToNow(start, { addSuffix: true })}
+								</p>
 							</motion.div>
 						</div>
 					</motion.div>
