@@ -3,6 +3,7 @@ import Header from '@/components/Layout/Header';
 import React from 'react';
 
 import { generateSeo } from '@/utils/generateSeo';
+import { Attribution } from './components/Attribution';
 import { Stats } from './components/Cards/Stats';
 import { RecentMoviesComponent } from './components/RecentMoviesComponent';
 import { RecentShowsComponent } from './components/RecentShowsComponent';
@@ -26,6 +27,7 @@ const page = async () => {
 				<Stats />
 				<WatchlistComponent />
 				<TopRatedComponent />
+				<Attribution />
 			</section>
 		</>
 	);

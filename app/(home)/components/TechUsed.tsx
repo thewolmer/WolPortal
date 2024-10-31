@@ -1,8 +1,6 @@
 'use client';
 import Reveal from '@/components/Animation/Reveal';
 import { Card } from '@/components/ui/card';
-import { fadeInUp } from '@/utils';
-import { motion } from 'framer-motion';
 import React from 'react';
 import { BiLogoNetlify } from 'react-icons/bi';
 import { FaNodeJs } from 'react-icons/fa';
@@ -121,7 +119,7 @@ const services = [
 
 const TechUsed = () => (
 	<Reveal>
-		<motion.section variants={fadeInUp} id="technologies" className="mt-6">
+		<section id="technologies" className="mt-6">
 			<h3 className="px-4 font-bold text-lg text-neutral-700 uppercase ">Technologies I use</h3>
 			<div className="mt-8 flex flex-col space-y-6">
 				<section>
@@ -168,7 +166,7 @@ const TechUsed = () => (
 					</div>
 				</section>
 			</div>
-		</motion.section>
+		</section>
 	</Reveal>
 );
 
