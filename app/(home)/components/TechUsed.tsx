@@ -111,7 +111,7 @@ const services = [
 	},
 ];
 
-const TechUsed = () => (
+export const TechUsed = () => (
 	<Reveal>
 		<section id="technologies" className="mt-6">
 			<h3 className="px-4 font-bold text-lg text-neutral-700 uppercase ">Technologies I use</h3>
@@ -163,5 +163,3 @@ const TechUsed = () => (
 		</section>
 	</Reveal>
 );
-
-export default TechUsed;

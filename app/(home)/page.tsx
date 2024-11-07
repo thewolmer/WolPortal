@@ -4,10 +4,10 @@ import Reveal from '@/components/Animation/Reveal';
 import { generateSeo } from '@/utils/generateSeo';
 
 import { BitMoji } from './components/BitMoji';
-import LinkTab from './components/LinkTab';
+import { LinkTab } from './components/LinkTab';
 import { MeSection } from './components/MeSection';
-import ProjectsSection from './components/ProjectsSection';
-import TechUsed from './components/TechUsed';
+import { ProjectsSection } from './components/ProjectsSection';
+import { TechUsed } from './components/TechUsed';
 
 export const generateMetadata = () =>
 	generateSeo({

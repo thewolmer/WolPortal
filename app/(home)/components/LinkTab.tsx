@@ -29,17 +29,15 @@ const Links = [
 	},
 ];
 
-const LinkTab = () => (
+export const LinkTab = () => (
 	<div className="mr-8 flex items-center space-x-2 rounded-md py-5">
 		<div className="mx-auto flex w-full flex-wrap items-center justify-between text-4xl">
 			{Links.map((link, index) => (
 				// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 				<Link key={index} href={link.link}>
-					<link.icon className='text-2xl text-accent-foreground transition duration-200 hover:scale-105 hover:text-primary hover:text-wolwhite' />
+					<link.icon className="text-2xl text-accent-foreground transition duration-200 hover:scale-105 hover:text-primary hover:text-wolwhite" />
 				</Link>
 			))}
 		</div>
 	</div>
 );
-
-export default LinkTab;
