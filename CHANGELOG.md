@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.6.0](https://github.com/thewolmer/WolPortal/branches/compare/v2.6.0..v2.5.1) (2024-11-07)
+
+
+### Others
+
+* cleanup ([62e8b84](https://github.com/thewolmer/WolPortal/commits/62e8b8408e47bff02256ec0da2f6b65242147faa))
+
+
+### Features
+
+* add work update & lanyard inactivity handler ([7237278](https://github.com/thewolmer/WolPortal/commits/7237278528fa62590e1a69c16235af16fc02bb9a))
+* **status:** ps5 live status support ([c8c933a](https://github.com/thewolmer/WolPortal/commits/c8c933ae0533d3e6a7c1efcccfbdfaa435bc6737))
+
 ## [2.5.1](https://github.com/thewolmer/WolPortal/branches/compare/v2.5.1..v2.5.0) (2024-10-31)
 
 
