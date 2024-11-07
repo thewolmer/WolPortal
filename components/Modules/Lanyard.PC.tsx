@@ -5,10 +5,9 @@ import { discord } from '@/constants/global';
 import { useLanyard } from '@/hooks/use-lanyard';
 import type { LanyardData } from '@/types/lanyard';
 import { formatDistanceToNow } from 'date-fns';
-import { AnimatePresence, MotionConfig, animate, motion } from 'framer-motion';
+import { AnimatePresence, MotionConfig, motion } from 'framer-motion';
 import type React from 'react';
 import { useState } from 'react';
-import { BiHide } from 'react-icons/bi';
 import { RiRadioButtonLine } from 'react-icons/ri';
 
 const TRANSITION = {
@@ -106,68 +105,76 @@ export const LanyardPC = () => {
 	const spotify = activities?.find((activity) => activity.name === 'Spotify');
 	const activity = activities?.filter((activity) => activity.name !== 'Spotify');
 
-	if (!isPlayingSpotify && !activity[0]) return null;
+	if (data.discord_status === 'offline') return null;
 
-	if (isPlayingSpotify || activity[0]) {
-		return (
-			<MotionConfig transition={TRANSITION}>
-				<motion.div
-					layout
-					initial="hidden"
-					animate="visible"
-					exit="exit"
-					variants={{
-						hidden: {
-							opacity: 0,
-						},
-						exit: {
-							opacity: 0,
-						},
-						visible: {
-							opacity: 1,
-						},
-					}}
-					transition={{
-						delay: 0.3,
-						duration: 0.7,
-					}}
-					onHoverStart={() => setHovered(true)}
-					onHoverEnd={() => setHovered(false)}
-				>
-					{isPlayingSpotify && spotify && !activity[0] && (
-						<StatusCard
-							isHovered={isHovered}
-							img={data.spotify.album_art_url as string}
-							title={'Listening to Spotify'}
-							line1={spotify?.details as string}
-							line2={spotify?.state as string}
-							timestamp={data.spotify.timestamps.start}
-						/>
-					)}
-					{activity[0] && activities[0].platform !== 'ps5' && (
-						<StatusCard
-							isHovered={isHovered}
-							img={`https://cdn.discordapp.com/app-assets/${activity[0].application_id}/${activity[0].assets.large_image}.png`}
-							title={activity[0].name}
-							line1={activity[0].assets.large_text as string}
-							line2={activity[0].state as string}
-							timestamp={activity[0].timestamps.start}
-						/>
-					)}
-					{activity[0] && activities[0].platform === 'ps5' && (
-						<StatusCard
-							isHovered={isHovered}
-							img={activity[0].assets.small_image?.replace(/^mp:external\/.+?\/https\//, 'https://') as string}
-							title={'Playing a game on PS5'}
-							line1={activity[0].name}
-							line2={activity[0].state as string}
-							timestamp={activity[0].timestamps.start}
-						/>
-					)}
-				</motion.div>
-			</MotionConfig>
-		);
-	}
+	return (
+		<MotionConfig transition={TRANSITION}>
+			<motion.div
+				layout
+				initial="hidden"
+				animate="visible"
+				exit="exit"
+				variants={{
+					hidden: {
+						opacity: 0,
+					},
+					exit: {
+						opacity: 0,
+					},
+					visible: {
+						opacity: 1,
+					},
+				}}
+				transition={{
+					delay: 0.3,
+					duration: 0.7,
+				}}
+				onHoverStart={() => setHovered(true)}
+				onHoverEnd={() => setHovered(false)}
+			>
+				{isPlayingSpotify && spotify && !activity[0] && (
+					<StatusCard
+						isHovered={isHovered}
+						img={data.spotify.album_art_url as string}
+						title={'Listening to Spotify'}
+						line1={spotify?.details as string}
+						line2={spotify?.state as string}
+						timestamp={data.spotify.timestamps.start}
+					/>
+				)}
+				{activity[0] && activities[0].platform !== 'ps5' && (
+					<StatusCard
+						isHovered={isHovered}
+						img={`https://cdn.discordapp.com/app-assets/${activity[0].application_id}/${activity[0].assets.large_image}.png`}
+						title={activity[0].name}
+						line1={activity[0].assets.large_text as string}
+						line2={activity[0].state as string}
+						timestamp={activity[0].timestamps.start}
+					/>
+				)}
+				{activity[0] && activities[0].platform === 'ps5' && (
+					<StatusCard
+						isHovered={isHovered}
+						img={activity[0].assets.small_image?.replace(/^mp:external\/.+?\/https\//, 'https://') as string}
+						title={'Playing a game on PS5'}
+						line1={activity[0].name}
+						line2={activity[0].state as string}
+						timestamp={activity[0].timestamps.start}
+					/>
+				)}
+				{activities.length === 0 && !isPlayingSpotify && data.discord_status !== 'offline' && (
+					<StatusCard
+						isHovered={isHovered}
+						img={'https://images.beta.cosmos.so/d70558fa-e630-4cbe-9ea2-c673b4ee9a14?format=jpeg'}
+						title={'Online on Discord'}
+						line1={'Just chilling..'}
+						line2={'No activity detected'}
+						timestamp={Date.now()}
+					/>
+				)}
+			</motion.div>
+		</MotionConfig>
+	);
 };
 
 const StatusCard = ({
@@ -189,7 +196,7 @@ const StatusCard = ({
 				>
 					<motion.div className="flex h-full items-center gap-5 overflow-hidden">
 						<motion.div layoutId="status-image" className="aspect-square h-16 w-16 rounded-md">
-							<Image src={img} alt="Status" width={300} height={300} className="h-16 w-16 rounded-sm" />
+							<Image src={img} alt="Status" width={350} height={350} className="h-16 w-16 rounded-sm" />
 						</motion.div>
 						<div className="w-full">
 							<motion.div
@@ -283,7 +290,7 @@ const StatusCard = ({
 					</motion.div>
 					<motion.div className="flex flex-col items-center gap-5 overflow-hidden">
 						<motion.div layoutId="status-image" className="aspect-square h-full w-full">
-							<Image priority src={img} alt="Status" width={300} height={300} className="h-full w-full rounded-md" />
+							<Image priority src={img} alt="Status" width={350} height={350} className="h-full w-full rounded-md" />
 						</motion.div>
 						<div className="w-full">
 							<motion.div
