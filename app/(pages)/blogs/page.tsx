@@ -2,7 +2,9 @@ import Reveal from '@/components/Animation/Reveal';
 import { generateSeo } from '@/utils/generateSeo';
 import getPostMetadata from '@/utils/getPostMetadata';
 
-import PostPreview from './components/PostPreview';
+import { fetchPages } from '@/lib/notion';
+import type { PageObjectResponse } from '@notionhq/client/build/src/api-endpoints';
+import { PostPreview } from './components/PostPreview';
 
 export const generateMetadata = () =>
 	generateSeo({
@@ -11,14 +13,20 @@ export const generateMetadata = () =>
 		url: '/blogs',
 	});
 
-const HomePage = () => {
-	const postMetadata = getPostMetadata();
-	const postPreviews = postMetadata.map((post) => <PostPreview key={post.slug} {...post} />);
+const HomePage = async () => {
+	const pages = await fetchPages();
+
+	const posts = pages.results as PageObjectResponse[];
 
 	return (
-		<Reveal>
-			<div className="grid grid-cols-1 gap-4 py-20 md:grid-cols-2">{postPreviews}</div>{' '}
-		</Reveal>
+		<div>
+			<Reveal>
+				<h1 className="my-10 text-center font-bold text-4xl">Blogs</h1>
+				{posts.map((post) => (
+					<PostPreview key={post.id} post={post as PageObjectResponse} />
+				))}
+			</Reveal>
+		</div>
 	);
 };
 
