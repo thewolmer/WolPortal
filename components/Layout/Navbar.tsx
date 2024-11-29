@@ -22,8 +22,8 @@ const Navbar = () => {
 								className="text rounded-md ring-2 ring-black ring-opacity-5 transition-transform hover:animate-spin-slow"
 								alt="Logo"
 							/>
-							{isBlogRoute && <span className="font-extrabold text-neutral-400">BLOGS</span>}
 						</div>
+						{isBlogRoute && <span className="font-extrabold text-neutral-400">BLOGS</span>}
 					</Link>
 				</div>
 			</div>

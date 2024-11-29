@@ -19,12 +19,14 @@ const HomePage = async () => {
 	const posts = pages.results as PageObjectResponse[];
 
 	return (
-		<div>
+		<div className="mx-auto w-full max-w-2xl">
 			<Reveal>
 				<h1 className="my-10 text-center font-bold text-4xl">Blogs</h1>
-				{posts.map((post) => (
-					<PostPreview key={post.id} post={post as PageObjectResponse} />
-				))}
+				<section className="flex flex-col gap-5">
+					{posts.map((post) => (
+						<PostPreview key={post.id} post={post as PageObjectResponse} />
+					))}
+				</section>
 			</Reveal>
 		</div>
 	);
