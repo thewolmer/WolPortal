@@ -1,17 +1,14 @@
-import React from 'react';
 import { FaGolang } from 'react-icons/fa6';
 import { RiVuejsFill } from 'react-icons/ri';
 import {
 	SiC,
 	SiCplusplus,
-	SiCsharp,
 	SiCss3,
 	SiGnubash,
 	SiHtml5,
 	SiJavascript,
-	SiMarkdown,
 	SiPython,
-	SiTypescript,
+	SiTypescript
 } from 'react-icons/si';
 
 export const getLanguageIcon = (language: string) => {
@@ -36,8 +33,6 @@ export const getLanguageIcon = (language: string) => {
 			return <SiC size={26} color="#005697" />;
 		case 'C++':
 			return <SiCplusplus size={26} color="#005697" />;
-		case 'C#':
-			return <SiCsharp size={26} color="#005697" />;
 		default:
 			return '-';
 	}
