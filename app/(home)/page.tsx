@@ -28,7 +28,7 @@ function Home() {
 							<div className="">
 								<p className="font-mono text-muted-foreground "> Hi, im Karan Rao</p>
 								<h1 className="text-balance font-extrabold font-mono text-3xl text-primary">
-									Web Developer and a Web3 Enthusiast
+									Web & iOS Developer
 								</h1>
 							</div>
 							<div className="inline-block text-muted-foreground">
