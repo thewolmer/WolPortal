@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.7.0](https://github.com/thewolmer/WolPortal/branches/compare/v2.7.0..v2.6.0) (2025-07-22)
+
+
+### Features
+
+* **home:** change h1 ([a32914b](https://github.com/thewolmer/WolPortal/commits/a32914b1d0ffafaa67da6182ee4b9a612d199a8e))
+
+
+### Bug Fixes
+
+* build fix ([3dc418d](https://github.com/thewolmer/WolPortal/commits/3dc418d81ea719807070caf21f964505b488e5b4))
+
 ## [2.6.0](https://github.com/thewolmer/WolPortal/branches/compare/v2.6.0..v2.5.1) (2024-11-07)
 
 
