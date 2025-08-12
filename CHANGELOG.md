@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.8.0](https://github.com/thewolmer/WolPortal/branches/compare/v2.8.0..v2.7.0) (2025-08-12)
+
+
+### Features
+
+* **teah-used:** update tech stack ([38ac329](https://github.com/thewolmer/WolPortal/commits/38ac329dfcce6c6d4b1f0fade7e7259fe1579207))
+
 ## [2.7.0](https://github.com/thewolmer/WolPortal/branches/compare/v2.7.0..v2.6.0) (2025-07-22)
 
 
